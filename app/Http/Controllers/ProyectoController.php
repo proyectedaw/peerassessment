@@ -19,8 +19,9 @@ class ProyectoController extends Controller
         //
         $proyectos = Proyecto::all();
         $campanyas = Campanya::all();
-        $pseudonimos = Pseudonimo::all(); //conseguir el pseudonimo de la tabla de psedonimos que hace referencia al participante en cuestión
-        return view('evaluacionproyecto', compact(['proyectos', 'campanyas', 'pseudonimos']));
+        $datosproyecto = ''; //pasamos una variable vacia a la vista
+        //Conseguir guardar el id del proyecto y pasarlo a la evaluacion
+        return view('evaluacionproyecto', compact(['proyectos', 'campanyas','datosproyecto']));
         /*
          $proyectos = DB::table('proyectos')
             ->join('pseudonimos', 'users.id', '=', 'contacts.user_id')
@@ -29,6 +30,7 @@ class ProyectoController extends Controller
             ->get();
         */
     }
+
 
     /**
      * Show the form for creating a new resource.

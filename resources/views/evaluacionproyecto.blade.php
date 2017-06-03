@@ -60,6 +60,8 @@ $height='height="220px"';
 	                        		<th>Evaluar</th>
 
 	                        	</tr>
+
+                                <?php echo $datosproyecto; //Variable pasada desde el controlador ?>
                                  @foreach ($proyectos as $proyecto)
                                 <tr>
                                     <td>Proyecto {{ $proyecto->id }}</td>
