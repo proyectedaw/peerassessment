@@ -18,7 +18,6 @@
         border-collapse: collapse;
     }
      .classWithPad { 
-        /*margin:10px; padding:10px; left: 160px */
         position:absolute;
         left:25%;
     }
