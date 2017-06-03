@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Principal</title>
+    <title>{{ trans('languaje.principal0') }}</title>
 
     <!-- Bootstrap Core CSS -->
     <!--./assets/less/bootstrap/bootstrap.min.css-->
@@ -118,8 +118,8 @@ h1, h2, h3{
 		       <div class="main-text"> <!--hidden-xs-->
             <div class="container">
               <div class="col-md-12">
-                  <h1>CAMPANYA DE PRESENTACIÓ DE CARTELLS</h1>
-                  <h2>LA MERCÉ 2017</h2>
+                  <h1>{{ trans('languaje.principal4') }}</h1>
+                  <h2>{{ trans('languaje.principal5') }}</h2>
                   <h3 class="hidden-xs">Peer Assessment</h3>
               </div>
             </div> 
@@ -136,7 +136,7 @@ h1, h2, h3{
 
 
       <nav class="navbar navbar-inverse" role="navigation" style="background-color: navy">
-    	<div class="container">
+    	<div class="container-fluid">
     		<!-- Brand and toggle get grouped for better mobile display -->
     		<div class="navbar-header">
     			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -149,15 +149,29 @@ h1, h2, h3{
     		<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     			<ul class="nav navbar-nav">
-    				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Inicio</a></li>
-    				<li role="presentation"><a role="tab" data-toggle="tab" href="#disenos">Ver diseños</a></li>
+    				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">{{ trans('languaje.principal1') }}</a></li>
+    				<li role="presentation"><a role="tab" data-toggle="tab" href="#disenos">{{ trans('languaje.principal2') }}</a></li>
     			</ul>
                 <!--class="btn btn-primary button" -->
     			<ul class="nav navbar-nav navbar-form navbar-right">
             <li><button class="btn btn-primary form-control" data-toggle="modal" data-target="#login">Login</button></li>
-            <li><button class="btn btn-info form-control" data-toggle="modal" data-target="#registro">Registrate</button></li>
-          </ul>
-    		</div>
+            <li><button class="btn btn-info form-control" data-toggle="modal" data-target="#registro">{{ trans('languaje.principal3') }}</button></li>
+            <li>
+              <button class="dropdown-toggle form-control" type="button" data-toggle="dropdown">Idioma
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li role="presentation"><a href="{{ url('lang', ['es']) }}">ES</a></li>
+                <li role="presentation"><a href="{{ url('lang', ['ca']) }}">CAT</a></li>
+              </ul>
+            </li>
+           <!-- <li>
+              <select class="chosen-select" tabindex="2">
+                <option value="/lang/es">ES</option>
+                <option value="/lang/ca">CAT</option>
+            </select>
+            </li>-->
+          </ul>        
+    		</div>          
     		<!-- /.navbar-collapse -->
     	</div>
     	<!-- /.container -->
@@ -170,8 +184,8 @@ h1, h2, h3{
           <!-- Example row of columns -->
             <div class="row">
               <div class="col-xs-6">
-                <h1>Presentacion campaña</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h1>{{ trans('languaje.principal6') }}</h1>
+                  <p>{{ trans('languaje.principal7') }}</p>
                   <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
               </div>
               <div class="col-xs-6">

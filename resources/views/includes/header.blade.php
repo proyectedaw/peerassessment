@@ -12,24 +12,32 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="menu-item"><a href="/">INICIO</a></li>
-                    <li class="menu-item"> 
+                    <li class="menu-item"><a href="/">{{ trans('languaje.principal1') }}</a></li>
+                    <p class="navbar-text"> 
                         @foreach ($campanyas as $campanya)
                             @if ($campanya->activa)
-                                <a href="#">Campaña activa: {{ $campanya->nombre }}</a>
+                                {{ trans('languaje.header1') }} {{ $campanya->nombre }}
                             @endif
                         @endforeach
-                    </li>           
+                    </p>           
                 </ul>
                 <ul class="nav navbar-nav visible-xs">
-                    <li class="menu-item"><a href="formentregaproyecto">Subir/evaluar</a></li>
-                    <li class="menu-item"><a href="#">Definir pseudonimo</a></li>
-                    <li class="menu-item"><a href="#">Condiciones de Evaluación</a></li>
+                    <li class="menu-item"><a href="formentregaproyecto">{{ trans('languaje.menuaccions1') }}</a></li>
+                    <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions2') }}</a></li>
+                    <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions3') }}</a></li>
                 </ul>
                  <ul class="nav navbar-nav navbar-form navbar-right">
                     <li class="btn-group usu-new">
                       <button type="button" class="btn btn-default" data-toggle="modal" data-target=".desconectar">Nombre participante</button>
                       <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".desconectar">LOGOUT</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-toggle form-control" type="button" data-toggle="dropdown">Idioma
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li role="presentation"><a href="{{ url('lang', ['es']) }}">ES</a></li>
+                        <li role="presentation"><a href="{{ url('lang', ['ca']) }}">CAT</a></li>
+                      </ul>
                     </li>
                 </ul>
             </div>

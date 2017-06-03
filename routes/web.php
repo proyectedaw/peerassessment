@@ -50,6 +50,13 @@ Route::get('evaluacion', function(){
 //Route::get('search', ['as' => 'search', 'uses' => 'SearchController@search']);
 //https://stackoverflow.com/questions/27298426/how-to-pass-get-parameters-to-laravel-from-with-get-method
 
+/*
+Route::get('evaluacion/{id}', function ($id) {
+    session(['id' => $id]);
+    return \Redirect::back();
+})
+*/
+
 Route::get('/evaluacionproyecto','ProyectoController@index');
 Route::get('/areaparticipante','CampanyaController@campanyactivaap');
 Route::get('evaluacion/{id}','ImageController@mostrarcartel');
@@ -75,3 +82,20 @@ Route::get('areaparticipante', function(){
 */
 
 Route::get('evaluacionold', 'CampanyaController@campanyactivaold');
+
+//ruta multidioma
+
+Route::group(['middleware' => ['web']], function () {
+ 
+    Route::get('/', function () {
+        return view('principal');
+    });
+ 
+    Route::get('lang/{lang}', function ($lang) {
+        session(['lang' => $lang]);
+        return \Redirect::back();
+    })->where([
+        'lang' => 'ca|es'
+    ]);
+ 
+});

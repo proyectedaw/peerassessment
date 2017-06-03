@@ -294,10 +294,7 @@ $height='height="220px"';
 			<div class="col-xs-3">
 				<div class="row">
 	                <div class="col-xs-12 classWithPad hidden-xs">
-	                    <h3>Acciones</h3>
-	                    <a href="#">Subir/evaluar</a><br/>
-	                    <a href="#">Definir pseudonimo</a><br/>
-	                    <a href="#">Condiciones de Evaluación</a>
+	                    @include ('includes.acciones')
 	                </div>
 	            </div> 
 			</div>

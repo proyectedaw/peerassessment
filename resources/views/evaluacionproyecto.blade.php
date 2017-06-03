@@ -50,13 +50,13 @@ $height='height="220px"';
             <div class ="col-xs-8">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1>Proyectos a Evaluar</h1>
+                        <h1>{{ trans('languaje.evaluacionproyecto4') }}</h1>
 	                        <table class="table table-hover text-centered container-fluid" align="center">
 	                        	<tr>
 	                        		<th></th>
-	                        		<th>Titulo</th>
-	                        		<th>Cartel</th>
-                                    <th>Descripción</th>
+	                        		<th>{{ trans('languaje.evaluacionproyecto1') }}</th>
+	                        		<th>{{ trans('languaje.evaluacionproyecto2') }}</th>
+                                    <th>{{ trans('languaje.evaluacionproyecto3') }}</th>
 	                        		<th>Evaluar</th>
 
 	                        	</tr>
@@ -81,10 +81,7 @@ $height='height="220px"';
             <div class="col-xs-4">
                 <div class="row">
                     <div class="col-xs-12 classWithPad hidden-xs">
-                        <h3>Acciones</h3>
-                        <a href="formentregaproyecto">Subir/evaluar</a><br/>
-                        <a href="#">Definir pseudonimo</a><br/>
-                        <a href="#">Condiciones de Evaluación</a>
+                        @include ('includes.acciones')
                     </div>
                 </div>
                 

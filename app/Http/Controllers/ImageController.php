@@ -63,6 +63,7 @@ class ImageController extends Controller
 
         return $response;
     }
+    //Para intentar pasar el cartel a la evaluacion
     public function mostrarcartel($id)
     {
         $proyecte = Proyecto::findOrFail($id);
