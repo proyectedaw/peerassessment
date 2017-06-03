@@ -186,23 +186,29 @@ h1, h2, h3{
         <!-- Example row of columns -->
  
             <div class="container-row col-sm-4">
-              <div class="col-xs-4 clearfix">
+              <div class="col-xs-4 col-sm-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+                <p>descripcion</p>
               </div>
-              <div class="col-xs-4">
+              <div class="col-xs-4 col-sm-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+                <p>descripcion</p>
               </div>
-              <div class="col-xs-4">
+              <div class="col-xs-4 col-sm-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+                <p>descripcion</p>
               </div>
-               <div class="col-xs-4">
+               <div class="col-xs-4 col-sm-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+                <p>descripcion</p>
               </div>
-              <div class="col-xs-4">
+              <div class="col-xs-4 col-sm-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+                <p>descripcion</p>
               </div>
-              <div class="col-xs-4">
+              <div class="col-xs-4 col-sm-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+                <p>descripcion</p>
               </div>
             </div>
 

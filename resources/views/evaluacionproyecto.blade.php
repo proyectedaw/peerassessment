@@ -51,11 +51,10 @@ $height='height="220px"';
                 <div class="row">
                     <div class="col-xs-12">
                         <h1>Proyectos a Evaluar</h1>
-	                        <table class="table table-hover text-centered" align="center">
+	                        <table class="table table-hover text-centered container-fluid" align="center">
 	                        	<tr>
 	                        		<th></th>
 	                        		<th>Titulo</th>
-	                        		<th>Psedonimo</th>
 	                        		<th>Cartel</th>
                                     <th>Descripción</th>
 	                        		<th>Evaluar</th>
@@ -65,8 +64,7 @@ $height='height="220px"';
                                 <tr>
                                     <td>Proyecto {{ $proyecto->id }}</td>
                                     <td>{{ $proyecto->titol }}</td>
-                                    <td></td>
-                                    <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#{{ $proyecto->id }}"><img <?php echo $width." ".$height ?> src="cartel/{{ $proyecto->id }}" alt="{{ $proyecto->titol}} " title="{{ $proyecto->titol }}"></button></td>
+                                    <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#{{ $proyecto->id }}"><img class="img-responsive" src="cartel/{{ $proyecto->id }}" alt="{{ $proyecto->titol}} " title="{{ $proyecto->titol }}"></button></td>
                                     <td>{{ $proyecto->descripcion }}</td>
                                     <td><button type="submit" value="evaluar" class="btn btn-primary" onclick="window.location.href='/evaluacion'">Evaluar</button></td>
                                 </tr>
