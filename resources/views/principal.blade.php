@@ -91,27 +91,27 @@ h1, h2, h3{
 	        <div class="carousel-inner">
 	            <div class="item active">
 	                <!-- Set the first background image using inline CSS below. -->
-	                <div class="fill" style="background-image:url('{{ URL::asset('img/cabecera/slide1.png')}}');">
+	                <div class="fill img-responsive" style="background-image:url('{{ URL::asset('img/cabecera/slide1.png')}}');">
 	                </div>
 	            </div>
                <div class="item">
                   <!-- Set the third background image using inline CSS below. -->
-                  <div class="fill" style="background-image:url('{{ URL::asset('img/cabecera/slide4.png')}}');">
+                  <div class="fill img-responsive" style="background-image:url('{{ URL::asset('img/cabecera/slide4.png')}}');">
                   </div>
               </div>
 	            <div class="item">
 	                <!-- Set the second background image using inline CSS below. -->
-	                <div class="fill" style="background-image:url('{{ URL::asset('img/cabecera/slide2.png')}}');">
+	                <div class="fill img-responsive" style="background-image:url('{{ URL::asset('img/cabecera/slide2.png')}}');">
 	                </div>
 	            </div>
 	            <div class="item">
 	                <!-- Set the third background image using inline CSS below. -->
-	                <div class="fill" style="background-image:url('{{ URL::asset('img/cabecera/slide3.png')}}');">
+	                <div class="fill img-responsive" style="background-image:url('{{ URL::asset('img/cabecera/slide3.png')}}');">
 	                </div>
 	            </div>
               <div class="item">
                   <!-- Set the third background image using inline CSS below. -->
-                  <div class="fill" style="background-image:url('{{ URL::asset('img/cabecera/slide5.png')}}');">
+                  <div class="fill img-responsive" style="background-image:url('{{ URL::asset('img/cabecera/slide5.png')}}');">
                   </div>
               </div>     
 	        </div>
@@ -182,77 +182,35 @@ h1, h2, h3{
           </div> 
       </div> 
        <div role="tabpanel" class="tab-pane fade" id="disenos">
-        <div class="container">
-        <!-- Example row of columns -->
- 
-            <div class="container-row col-sm-4">
-              <div class="col-xs-4 col-sm-6">
+          <div class="container-row col-sm-12">
+              <div class="col-xs-4">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
                 <p>descripcion</p>
               </div>
-              <div class="col-xs-4 col-sm-6">
+              <div class="col-xs-4">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
                 <p>descripcion</p>
               </div>
-              <div class="col-xs-4 col-sm-6">
+              <div class="col-xs-4">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
                 <p>descripcion</p>
               </div>
-               <div class="col-xs-4 col-sm-6">
+               <div class="col-xs-4">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
                 <p>descripcion</p>
               </div>
-              <div class="col-xs-4 col-sm-6">
+              <div class="col-xs-4">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
                 <p>descripcion</p>
               </div>
-              <div class="col-xs-4 col-sm-6">
+              <div class="col-xs-4">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
                 <p>descripcion</p>
               </div>
-            </div>
-
-
-
-
-         <!-- <div class="row">
-            <div class="col-xs-12">
-              <h2>Otros diseños de años anteriores</h2>
-             <p>Crear tabla con imagenes y titulos.</p>
-             <div class="row">
-               <div class="col-xs-4">
-                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-               </div>
-               <div class="col-xs-4">
-                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-               </div>
-               <div class="col-xs-4">
-                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-               </div>
-             </div>
-              <div class="row">
-               <div class="col-xs-4">
-                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-               </div>
-               <div class="col-xs-4">
-                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-               </div>
-               <div class="col-xs-4">
-                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-               </div>
-             </div>
-            </div>
-          </div>-->
-        </div> 
+          </div>
       </div>
     </div>
 </div>
-    <footer>
-    	<div id="peu">
-    		<p>&copy; 2017 - CVPuppies | <a href="#">Pol&iacute;tica de Privacidad</a> | Pilar Bielsa Martínez</p>
-    	</div>
-    </footer>
-
     <div class="modal fade" id="login">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
