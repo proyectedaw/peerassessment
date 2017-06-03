@@ -173,9 +173,6 @@ h1, h2, h3{
                 <li role="presentation"><a href="{{ url('lang', ['ca']) }}">CAT</a></li>
               </ul>
             </li>
-            <li>
-              <input checked data-toggle="toggle" type="checkbox">
-            </li>
            <!-- <li>
               <select class="chosen-select" tabindex="2">
                 <option value="/lang/es">ES</option>
