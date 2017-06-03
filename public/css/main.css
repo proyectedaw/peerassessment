@@ -1,0 +1,37 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.jumbotron{
+	background-image: url(../img/cursohtmlcss.jpg);
+	margin-bottom: 0;
+	background-repeat: repeat-y;
+	background-position: center center;
+	background-color: black;
+	color: blue;
+	height: 250px;
+}
+.navbar-inverse{
+	border-radius: 0;
+}
+
+.white {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
