@@ -27,7 +27,7 @@ return [
     'principal5' => 'LA MERCÉ 2017',
     'principal6' => 'Prensetació Campanya',
     'principal7' => 'Com cada any, es celebren al setembre les festes de la merce.',
-    'principal8' => '',
+    'principal8' => 'La Mercè és la festa major de la ciutat de Barcelona. La seva celebració,  es duu a terme al voltan del 24 de setembre, festivitat de la Mare de Déu de la Mercè. És una festa farcida d\'activitats de cultura popular molt diverses i per a totes les edats.',
 
     'formentrega1' => 'Entrega el teu projecte ',
     'formentrega2' => 'Títol ',
@@ -44,5 +44,27 @@ return [
     'evaluacionproyecto3' => 'Descripció',
     'evaluacionproyecto4' => 'Projectes a Evaluar',
     'evaluacionproyecto5' => 'Aquests projectes han estat asignants aleatoriament seguint un complexe algorisme',
+
+    'login1' =>'Introdueix el teu E-mail',
+    'login2' =>'Introdueix la teva contrasenya',
+
+    'registro1' => 'Introdueix el teu DNI',
+    'registro2' => 'Introdueix el teu nom',
+    'registro3' => 'Introdueix els teus cognoms',
+    'registro4' => 'Introdueix el teu E-mail',
+    'registro5' => 'Introdueix una contrasenya',
+    'registro6' => 'Confirmació de la contrasenya',
+    'registro7' => 'Nom',
+    'registro8' => 'Cognoms',
+    'registro9' => 'Data de Naixement',
+    'registro10' => 'Contrasenya',
+    'registro11' => 'Confirmar',
+    'registro12' => 'Registrarse',
+
+    'evaluacion1' => 'Formulari d\'evaluació',
+    'evaluacion2' => 'Concepte',
+    'evaluacion3' => 'Comentaris',
+    'evaluacion4' => 'Afegeix un comentari sobre l\'evaluació',
+    'evaluacion5' => 'Enviar evaluació',
 
 ];

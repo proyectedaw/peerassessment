@@ -32,4 +32,9 @@ class EvaluacionController extends Controller
             ->get();
         */
     }
+    /*public function satisfactoria()
+    {
+        $campanyas = Campanya::all();
+         return view('entregasatisfactoria', compact(['campanyas']));//, $idproyecto]));
+    } */
 }

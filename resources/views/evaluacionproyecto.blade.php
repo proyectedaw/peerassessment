@@ -13,6 +13,9 @@ $height='height="220px"';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+
     <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
 
      <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">

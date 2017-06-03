@@ -40,12 +40,28 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="menu-item"><a href="/">INICIO</a></li>
+                    <li class="menu-item"><a href="/">{{ trans('languaje.principal1') }}</a></li>
+                    <p class="navbar-text"> 
+                                {{ trans('languaje.header1') }}                             
+                    </p>           
+                </ul>
+                <ul class="nav navbar-nav visible-xs">
+                    <li class="menu-item"><a href="formentregaproyecto">{{ trans('languaje.menuaccions1') }}</a></li>
+                    <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions2') }}</a></li>
+                    <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions3') }}</a></li>
                 </ul>
                  <ul class="nav navbar-nav navbar-form navbar-right">
                     <li class="btn-group usu-new">
                       <button type="button" class="btn btn-default" data-toggle="modal" data-target=".desconectar">Nombre participante</button>
                       <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".desconectar">LOGOUT</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-toggle form-control" type="button" data-toggle="dropdown">Idioma
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li role="presentation"><a href="{{ url('lang', ['es']) }}">ES</a></li>
+                        <li role="presentation"><a href="{{ url('lang', ['ca']) }}">CAT</a></li>
+                      </ul>
                     </li>
                 </ul>
             </div>
@@ -54,10 +70,25 @@
         <!-- /.container -->
     </nav>
     </header>
-   
-    <div>
-        <h2>Entrega satisfactoria!</h2>
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-xs-8">
+                 <div class="alert alert-success" role="alert">
+                    <span class="fa fa-info-circle">Entrega satisfactoria!</span>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-12 classWithPad hidden-xs">
+                        @include ('includes.acciones')
+                    </div>
+                </div> 
+            </div>
+        </div>
     </div>
+
+   
+
     
    <!-- jQuery -->
 

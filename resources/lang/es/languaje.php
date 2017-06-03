@@ -28,7 +28,7 @@ return [
     'principal5' => 'LA MERCÉ 2017',
     'principal6' => 'Prensetación Campaña',
     'principal7' => 'Como cada año, se celebran en septiembre las fiesta de La Mercé.',
-    'principal8' => '',
+    'principal8' => 'La Mercè, es la fiesta mayor de Barcelona, España, desde que en el año 1902 el ayuntamiento de la ciudad confeccionó por primera vez un programa de actos extraordinarios para celebrar la festividad de la Virgen de la Mare de Déu de la Mercè, que tiene lugar el 24 de septiembre. En el año 1980 fue declarada Fiesta de Interés Turístico Nacional.',
 
     'formentrega1' => 'Entrega tu proyecto',
     'formentrega2' => 'Titulo ',
@@ -45,5 +45,27 @@ return [
     'evaluacionproyecto3' => 'Descripción',
     'evaluacionproyecto4' => 'Proyectos a evaluar',
     'evaluacionproyecto5' => 'Estos proyectos han sido asignados de forma aletoria siguiendo un complejo algoritmo',
+
+    'login1' => 'Introduce tu E-mail',
+    'login2' => 'Introduce tu password',
+
+    'registro1' => 'Introduce tu DNI',
+    'registro2' => 'Introduce tu nombre',
+    'registro3' => 'Introduce tus apellidos',
+    'registro4' => 'Introduce tu E-mail',
+    'registro5' => 'Introduce un password',
+    'registro6' => 'Confirmación del password',
+    'registro7' => 'Nombre',
+    'registro8' => 'Apellidos',
+    'registro9' => 'Fecha de nacimiento',
+    'registro10' => 'Password',
+    'registro11' => 'Confirmar',
+    'registro12' => 'Registrarse',
+
+    'evaluacion1' => 'Formulario de evaluación',
+    'evaluacion2' => 'Concepto',
+    'evaluacion3' => 'Añade un comentario sobre la evaluación',
+    'evaluacion4' => 'Enviar evaluación',
+
 
 ];

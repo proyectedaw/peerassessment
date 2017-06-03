@@ -46,7 +46,9 @@ class ImageController extends Controller
          $proyecte->save();
 //Si la subida es correcta abrir un modal en lugar de una nueva pagina.
 
+         $campanyas = Campanya::all();
          return Redirect::to('entregasatisfactoria');//En lugar de entrar aquí lanzar mensaje de que se ha subido correctamente
+         //return redirect()->action('EvaluacionController@satisfactoria');
     }
 
     /*

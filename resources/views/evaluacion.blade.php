@@ -13,6 +13,9 @@ $height='height="220px"';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+  	<link rel="shortcut icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
 
@@ -50,7 +53,7 @@ $height='height="220px"';
      <header>
     	@include('includes.header')
     </header>
-	<h1>Formulario de evaluacion</h1>
+	<h1>{{ trans('languaje.evaluacion1') }}</h1>
 	<div class="container container-table hidden-xs">
 		<div class="row">
 			<div class="col-xs-3">
@@ -82,7 +85,7 @@ $height='height="220px"';
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="row">
-							<label for="concepto" class="col-xs-12">Concepto</label>
+							<label for="concepto" class="col-xs-12">{{ trans('languaje.evaluacion2') }}</label>
 						</div>
 					</div>
 					<div class="col-xs-6">
@@ -147,20 +150,20 @@ $height='height="220px"';
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="row">
-							<label for="comentarios" class="col-xs-12">Comentarios</label>
+							<label for="comentarios" class="col-xs-12">{{ trans('languaje.evaluacion3') }}</label>
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="row">
 							<div class="col-xs-12">
-								<textarea placeholder="añade un comentario sobre la evaluación" id="comentarios" name="comentarios"></textarea>
+								<textarea placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						<button class="btn btn-primary form-control" value="evaluar">Enviar Evaluacion</button>
+						<button class="btn btn-primary form-control" value="evaluar">{{ trans('languaje.evaluacion5') }}</button>
 					</div>
 				</div>
 			</div>
@@ -168,10 +171,7 @@ $height='height="220px"';
 			<div class="col-xs-3">
 				<div class="row">
 	                <div class="col-xs-12 classWithPad hidden-xs">
-	                    <h3>Acciones</h3>
-	                    <a href="#">Subir/evaluar</a><br/>
-	                    <a href="#">Definir pseudonimo</a><br/>
-	                    <a href="#">Condiciones de Evaluación</a>
+	                    @include ('includes.acciones')
 	                </div>
 	            </div> 
 			</div>

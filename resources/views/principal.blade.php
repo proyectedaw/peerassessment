@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+      
+
     <title>{{ trans('languaje.principal0') }}</title>
 
     <!-- Bootstrap Core CSS -->
@@ -17,6 +19,12 @@
     <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{ URL::asset('css/half-slider.css')}}" rel="stylesheet">
+
+    <link rel="icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+      <link rel="shortcut icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap2-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -75,6 +83,7 @@ h1, h2, h3{
 }
   
  </style>
+
 </head>
 
 <body>
@@ -164,6 +173,9 @@ h1, h2, h3{
                 <li role="presentation"><a href="{{ url('lang', ['ca']) }}">CAT</a></li>
               </ul>
             </li>
+            <li>
+              <input checked data-toggle="toggle" type="checkbox">
+            </li>
            <!-- <li>
               <select class="chosen-select" tabindex="2">
                 <option value="/lang/es">ES</option>
@@ -186,7 +198,7 @@ h1, h2, h3{
               <div class="col-xs-6">
                 <h1>{{ trans('languaje.principal6') }}</h1>
                   <p>{{ trans('languaje.principal7') }}</p>
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                  <p>{{ trans('languaje.principal8') }}</p>
               </div>
               <div class="col-xs-6">
                 <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
@@ -237,14 +249,14 @@ h1, h2, h3{
                     <div class="form-group">
                          <label for="mail" class="col-sm-4 control-label">E-mail:</label>
                          <div class="col-sm-6">
-                             <input type="text" class="form-control" name="email" id="email" placeholder="Introduce el e-mail">
+                             <input type="text" class="form-control" name="email" id="email" placeholder="{{ trans('languaje.login1') }}">
                          </div>
                     </div>
                     <div class="form-group">
                         <!-- <span class="input-group-addon" id="basic-addon1">Pass</span>-->
                         <label for="pass" class="col-sm-4 control-label">Password:</label>
                          <div class="col-sm-6">
-                             <input type="password" class="form-control" name="pass" id="pass" placeholder="Introduce el password">
+                             <input type="password" class="form-control" name="pass" id="pass" placeholder="{{ trans('languaje.login2') }}">
                          </div>   
                     </div>
                     <div class="form-group">
@@ -270,48 +282,48 @@ h1, h2, h3{
                     <div class="form-group">
                          <label for="mail" class="col-sm-4 control-label">DNI/NIE:</label>
                          <div class="col-sm-6">
-                             <input type="text" class="form-control" name="nif" id="nif" placeholder="Introduce tu dni">
+                             <input type="text" class="form-control" name="nif" id="nif" placeholder="{{ trans('languaje.registro1') }}">
                          </div>
                     </div>
                     <div class="form-group">
-                        <label for="pass" class="col-sm-4 control-label">Nombre:</label>
+                        <label for="pass" class="col-sm-4 control-label">{{ trans('languaje.registro7') }}:</label>
                          <div class="col-sm-6">
-                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduce tu nombre">
+                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="{{ trans('languaje.registro2') }}">
                          </div> 
                     </div>
                    <div class="form-group">
-                        <label for="pass" class="col-sm-4 control-label">Apellidos:</label>
+                        <label for="pass" class="col-sm-4 control-label">{{ trans('languaje.registro8') }}:</label>
                          <div class="col-sm-6">
-                             <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos">
+                             <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="{{ trans('languaje.registro3') }}">
                          </div> 
                     </div>
                    <div class="form-group">
-                        <label for="pass" class="col-sm-4 control-label">Fecha de nacimiento:</label>
+                        <label for="pass" class="col-sm-4 control-label">{{ trans('languaje.registro9') }}:</label>
                          <div class="col-sm-6">
-                             <input type="date" class="form-control" name="fnac" id="fnac" placeholder="Introduce la fecha de nacimiento">
+                             <input type="date" class="form-control" name="fnac" id="fnac">
                          </div> 
                     </div>
                     <div class="form-group">
                          <label for="mail" class="col-sm-4 control-label">E-mail:</label>
                          <div class="col-sm-6">
-                             <input type="text" class="form-control" name="email" id="email" placeholder="Introduce el e-mail">
+                             <input type="text" class="form-control" name="email" id="email" placeholder="{{ trans('languaje.registro4') }}">
                          </div>
                     </div>
                     <div class="form-group">
-                        <label for="pass" class="col-sm-4 control-label">Password:</label>
+                        <label for="pass" class="col-sm-4 control-label">{{ trans('languaje.registro10') }}:</label>
                          <div class="col-sm-6">
-                             <input type="password" class="form-control" name="pass" id="pass" placeholder="Introduce el password">
+                             <input type="password" class="form-control" name="pass" id="pass" placeholder="{{ trans('languaje.registro5') }}">
                          </div>  
                     </div>
                      <div class="form-group">
-                        <label for="conpass" class="col-sm-4 control-label">Confirmar</label>
+                        <label for="conpass" class="col-sm-4 control-label">{{ trans('languaje.registro11') }}</label>
                          <div class="col-sm-6">
-                             <input type="password" class="form-control" name="conpass" id="conpass" placeholder="Confirmacion de password">
+                             <input type="password" class="form-control" name="conpass" id="conpass" placeholder="{{ trans('languaje.registro6') }}">
                          </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-6">
-                            <button type="submit" class="btn btn-info form-control" name="registro" value="registro">Registrarse</button> 
+                            <button type="submit" class="btn btn-info form-control" name="registro" value="registro">{{ trans('languaje.registro12') }}</button> 
                         </div>
                     </div>
                            

@@ -69,7 +69,8 @@ Route::get('cartel/{id}', 'ImageController@showPicture');
 Route::get('formentregaproyecto', 'ImageController@addPicture');
 
 Route::get('entregasatisfactoria', function(){ 
-	return View::make('entregasatisfactoria');
+	$campanyas = Campanya::all();
+	return View::make('entregasatisfactoria',compact(['campanyas']));
 });
 Route::post('add', 'ImageController@savePicture');
 
