@@ -63,4 +63,15 @@ class ImageController extends Controller
 
         return $response;
     }
+    public function mostrarcartel($id)
+    {
+        $proyecte = Proyecto::findOrFail($id);
+        $cartel = Image::make($proyecte->cartel);
+        $response = Response::make($cartel->encode('jpeg'));
+
+        //setting content-type
+        $response->header('Content-Type', 'image/jpeg');
+
+        return $response;
+    }
 }

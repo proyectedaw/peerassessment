@@ -1,5 +1,8 @@
 <?php
 
+use App\Proyecto;
+use App\Campanya;
+use App\Aspecto;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,25 +38,21 @@ Route::get('formentregaproyecto', function(){
 	return View::make('formentregaproyecto');
 });
 
+Route::get('evaluacion', function(){ 
+	 $proyectos = Proyecto::all();
+    	$campanyas = Campanya::all();
+        $aspectos = Aspecto::all();
 
-/*
-Route::get('evaluacionproyecto', function(){ 
-	//$campanya = DB::table('campanyas')->get();
-	//return $campanya;
-
-	//return view('evaluacionproyecto', compact($campanya));
-	//return view('evaluacionproyecto');
-
-	$campanyas = \App\Campanya::all();
-	return view('evaluacionproyecto', ['campanyas'=>$campanyas]);
+        return view('evaluacion', compact(['proyectos', 'campanyas','aspectos']));
+	//return View::make('evaluacion');
 });
-*/
-//Route::get('/evaluacionproyecto','CampanyaController@index');
 
+//Route::get('search', ['as' => 'search', 'uses' => 'SearchController@search']);
+//https://stackoverflow.com/questions/27298426/how-to-pass-get-parameters-to-laravel-from-with-get-method
 
 Route::get('/evaluacionproyecto','ProyectoController@index');
 Route::get('/areaparticipante','CampanyaController@campanyactivaap');
-Route::get('/evaluacion','EvaluacionController@index');
+Route::get('evaluacion/{id}','ImageController@mostrarcartel');
 Route::get('formentregaproyecto','CampanyaController@campanyactivaformp');
 
 //Rutas al controlador de imagenes:

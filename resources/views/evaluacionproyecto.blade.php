@@ -61,14 +61,17 @@ $height='height="220px"';
 
 	                        	</tr>
 
-                                <?php echo $datosproyecto; //Variable pasada desde el controlador ?>
                                  @foreach ($proyectos as $proyecto)
                                 <tr>
                                     <td>Proyecto {{ $proyecto->id }}</td>
                                     <td>{{ $proyecto->titol }}</td>
                                     <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#{{ $proyecto->id }}"><img class="img-responsive" src="cartel/{{ $proyecto->id }}" alt="{{ $proyecto->titol}} " title="{{ $proyecto->titol }}"></button></td>
                                     <td>{{ $proyecto->descripcion }}</td>
-                                    <td><button type="submit" value="evaluar" class="btn btn-primary" onclick="window.location.href='/evaluacion'">Evaluar</button></td>
+                                    <?php $datosproyecto = $proyecto->id; //Hay que pasar el id al darle al boton
+                                        //echo $datosproyecto;
+                                     ?>
+                                    <!--<td><button type="submit" value="evaluar" class="btn btn-primary" onclick="window.location.href='/evaluacion'">Evaluar</button></td>-->
+                                    <td><a class="btn btn-primary" href="/evaluacion?<?php echo $datosproyecto; ?>">Evaluar</a></td>
                                 </tr>
                                 @endforeach
 	                        </table>

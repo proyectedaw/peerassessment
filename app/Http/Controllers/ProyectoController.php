@@ -19,9 +19,8 @@ class ProyectoController extends Controller
         //
         $proyectos = Proyecto::all();
         $campanyas = Campanya::all();
-        $datosproyecto = ''; //pasamos una variable vacia a la vista
         //Conseguir guardar el id del proyecto y pasarlo a la evaluacion
-        return view('evaluacionproyecto', compact(['proyectos', 'campanyas','datosproyecto']));
+        return view('evaluacionproyecto', compact(['proyectos', 'campanyas']));
         /*
          $proyectos = DB::table('proyectos')
             ->join('pseudonimos', 'users.id', '=', 'contacts.user_id')

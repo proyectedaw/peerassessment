@@ -60,7 +60,11 @@ $height='height="220px"';
 			  	@if ($proyecto->id == 13) 
 			  	<!--controlar el id del proyecto a evaluar para mostrar la imagen en cuestion, así como el titulo y la descripcion-->
 	               <img <?php echo $height." ".$width; ?> src="cartel/{{ $proyecto->id }}"alt="Proyecto1">
-
+	               <!--<?php
+	               //$datosproyecto='';
+	               //$datosproyecto=($_GET['datosproyecto']);
+	               //echo $datosproyecto;
+	                ?>-->
 	               <div class="row">
 					<div class="col-xs-12">
 						<h3>{{ $proyecto->titol }}</h3>
