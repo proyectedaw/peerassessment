@@ -53,8 +53,8 @@
     <!-- Bootstrap Core JavaScript -->
 
     <script src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-    <footer>
-        <p>&copy; Copyright 2016 - All rights reserved - </p>
-    </footer>
+    <footer style="text-align: center; font-weight: bold;">
+            @include('includes.footer')
+     </footer>
 </body>
 </html>

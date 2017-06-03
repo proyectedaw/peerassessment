@@ -92,9 +92,9 @@ $height='height="220px"';
     <!-- Bootstrap Core JavaScript -->
     <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-    <footer>
-        <p>&copy; Copyright 2016 - All rights reserved - </p>
-    </footer>
+    <footer style="text-align: center; font-weight: bold;">
+            @include('includes.footer')
+     </footer>
 <!--Cambiar el src del modal para poder ver la imagen en grande-->
   @foreach($proyectos as $key => $proyecto)
     <div class="modal fade" id="{{ $proyecto->id }}" tabindex="-1" role="dialog" aria-hidden="true">

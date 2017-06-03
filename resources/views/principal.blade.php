@@ -323,8 +323,8 @@ h1, h2, h3{
     })
     </script>
     <footer style="text-align: center; font-weight: bold;">
-			<p>Copyright &copy; Isaac Garcia productions 2017</p>
-	</footer>
+			@include('includes.footer')
+	 </footer>
 </body>
 
 </html>

@@ -175,6 +175,9 @@ $height='height="220px"';
 		</div>
 
 	</div><!--end-container-->
+	<footer style="text-align: center; font-weight: bold;">
+			@include('includes.footer')
+	 </footer>
 	  <!-- jQuery -->
 
     <script src="{{ URL::asset('js/jquery.js')}}"></script>

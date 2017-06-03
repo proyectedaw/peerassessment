@@ -73,6 +73,9 @@
             </div>
         </div>
     </div>
+    <footer style="text-align: center; font-weight: bold;">
+            @include('includes.footer')
+     </footer>
     
     
    <!-- jQuery -->
