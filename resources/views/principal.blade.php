@@ -113,8 +113,7 @@ h1, h2, h3{
                   <!-- Set the third background image using inline CSS below. -->
                   <div class="fill" style="background-image:url('{{ URL::asset('img/cabecera/slide5.png')}}');">
                   </div>
-              </div>
-	         
+              </div>     
 	        </div>
 		       <div class="main-text"> <!--hidden-xs-->
             <div class="container">
@@ -164,19 +163,19 @@ h1, h2, h3{
     	<!-- /.container -->
     </nav>
 
-
+<div class="container">
     <div class="tab-content">
        <div role="tabpanel" class="tab-pane fade in active" id="home">
           <div class="container">
           <!-- Example row of columns -->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-xs-6">
                 <h1>Presentacion campaña</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
               </div>
-              <div class="col-md-6">
-                <img src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              <div class="col-xs-6">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
               </div>
             </div>
             <hr>
@@ -185,21 +184,63 @@ h1, h2, h3{
        <div role="tabpanel" class="tab-pane fade" id="disenos">
         <div class="container">
         <!-- Example row of columns -->
-          <div class="row">
-            <div class="col-md-6" style="">
-              <!--<embed src="audio/The-Long-Road.mp3" autostart="true" loop="true"width="2" height="0"></embed>-->
+ 
+            <div class="container-row col-sm-4">
+              <div class="col-xs-4 clearfix">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              </div>
+              <div class="col-xs-4">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              </div>
+              <div class="col-xs-4">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              </div>
+               <div class="col-xs-4">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              </div>
+              <div class="col-xs-4">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              </div>
+              <div class="col-xs-4">
+                <img class="img-responsive" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+              </div>
+            </div>
+
+
+
+
+         <!-- <div class="row">
+            <div class="col-xs-12">
               <h2>Otros diseños de años anteriores</h2>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+             <p>Crear tabla con imagenes y titulos.</p>
+             <div class="row">
+               <div class="col-xs-4">
+                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+               </div>
+               <div class="col-xs-4">
+                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+               </div>
+               <div class="col-xs-4">
+                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+               </div>
+             </div>
+              <div class="row">
+               <div class="col-xs-4">
+                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+               </div>
+               <div class="col-xs-4">
+                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+               </div>
+               <div class="col-xs-4">
+                  <img height="150px" width="100px" src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
+               </div>
+             </div>
             </div>
-             <div class="col-md-6">
-              <img src="{{ URL::asset('img/cartel-la-merce-barcelona.png')}}">
-            </div>
-          </div>
+          </div>-->
         </div> 
       </div>
     </div>
-
+</div>
     <footer>
     	<div id="peu">
     		<p>&copy; 2017 - CVPuppies | <a href="#">Pol&iacute;tica de Privacidad</a> | Pilar Bielsa Martínez</p>
