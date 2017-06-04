@@ -71,4 +71,18 @@ return [
     'evaluacion4' => 'Afegeix un comentari sobre l\'evaluació',
     'evaluacion5' => 'Enviar evaluació',
 
+    'adminarea1' => 'Afegir aspectes',
+    'adminarea2' => 'Aspecte',
+    'adminarea3' => 'Introdueix un aspecte',
+    'adminarea4' => 'Percentatge',
+    'adminarea5' => 'Introdueix un percentatge',
+    'adminarea6' => 'Gestió de campanyes',
+    'adminarea7' => 'Campanyes disponibles',
+    'adminarea8' => 'Estat',
+    'adminarea9' => 'Afegir',
+    'adminarea10' => 'Gestió d\'assignació',
+    'adminarea11' => 'Iniciar assignació',
+    'adminarea12' => 'Llista de participants',
+    'adminarea13' => 'Nom',
+
 ];

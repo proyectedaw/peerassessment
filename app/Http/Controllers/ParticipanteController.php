@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Participante;
+use App\Campanya;
+
 class ParticipanteController extends Controller
 {
     /**
@@ -14,6 +17,10 @@ class ParticipanteController extends Controller
     public function index()
     {
         //
+        $participantes = Participante::all();
+        $campanyas = Campanya::all();
+
+        return view('paneladmin', compact('participantes','campanyas'));
     }
 
     /**

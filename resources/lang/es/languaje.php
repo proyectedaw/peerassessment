@@ -72,5 +72,19 @@ return [
     'evaluacion4' => 'Añade un comentario sobre la evaluación',
     'evaluacion5' => 'Enviar evaluación',
 
+    'adminarea1' => 'Añadir aspectos',
+    'adminarea2' => 'Aspecto',
+    'adminarea3' => 'Introduce un aspecto',
+    'adminarea4' => 'Porcentaje',
+    'adminarea5' => 'Introduce un porcentaje',
+    'adminarea6' => 'Gestión de campañas',
+    'adminarea7' => 'Campañas disponibles',
+    'adminarea8' => 'Estado',
+    'adminarea9' => 'Añadir',
+    'adminarea10' => 'Gestión de asignación',
+    'adminarea11' => 'Iniciar asignación',
+    'adminarea12' => 'Lista de participantes',
+    'adminarea13' => 'Nombre',
+
 
 ];
