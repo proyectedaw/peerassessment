@@ -8,7 +8,7 @@ use App\Participante;
 use App\Campanya;
 use App\Proyecto;
 
-class ParticipanteController extends Controller
+class AspectoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +18,8 @@ class ParticipanteController extends Controller
     public function index()
     {
         //
-        
     }
-    public function paneladmininfo()
+        public function addaspecto()
     {
         $participantes = Participante::all();
         $campanyas = Campanya::all();
@@ -45,28 +44,9 @@ class ParticipanteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-   public function store (Request $request)
+    public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-        'nom'=>'required',
-        'dob' => 'required',
-        'email' => 'required|max:255',
-        'dni' => 'required|max:9',
-        'userpass'=>'required|max:10',]);
-        if ($validator->fails()) {
-            return back()
-            ->withInput()
-            ->withErrors($validator);
-        }
-        $participante = new \App\Participante;
-        $participante->nom = $request->nom;
-        $participante->dob =$request->dob;
-        $participante->email = $request->email;
-        $participante->dni = $request->dni;
-        $participante->title = $request->title;
-        $participante->save();
-        //$participante = App::participante;
-        return redirect('/');
+        //
     }
 
     /**

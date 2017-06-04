@@ -58,7 +58,7 @@ Route::get('evaluacion/{id}', function ($id) {
 */
 
 Route::get('/evaluacionproyecto','ProyectoController@index');
-Route::get('/paneladmin','ParticipanteController@index');
+Route::get('/paneladmin','ParticipanteController@paneladmininfo');
 Route::get('/areaparticipante','CampanyaController@campanyactivaap');
 Route::get('evaluacion/{id}','ImageController@mostrarcartel');
 Route::get('formentregaproyecto','CampanyaController@campanyactivaformp');
