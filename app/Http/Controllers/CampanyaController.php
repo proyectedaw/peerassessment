@@ -31,6 +31,11 @@ class CampanyaController extends Controller
         $campanyas = Campanya::all();
         return view('areaparticipante', ['campanyas' => $campanyas]);
     }
+      public function campanyactivaadmin()
+    {
+        $campanyas = Campanya::all();
+        return view('paneladmin', ['campanyas' => $campanyas]);
+    }
     public function campanyactivaeva()
     {
         $campanyas = Campanya::all();
