@@ -54,9 +54,9 @@ $height='height="220px"';
     	@include('includes.header')
     </header>
 	<h1>{{ trans('languaje.evaluacion1') }}</h1>
-	<div class="container container-table hidden-xs">
+	<div class="container container-table">
 		<div class="row">
-			<div class="col-xs-3">
+			<div class="col-xs-3 hidden-xs">
 			  @foreach($proyectos as $key => $proyecto)
 			 <!-- <?php $idproyecto = $proyecto->id; ?>
 				<?php //echo $idproyecto; ?>-->
@@ -81,116 +81,18 @@ $height='height="220px"';
 	            @endif
 	           @endforeach
 			</div>
-			<div class="col-xs-6">
-				<div class="row">
-					<div class="col-xs-6">
-						<div class="row">
-							<label for="concepto" class="col-xs-12">{{ trans('languaje.evaluacion2') }}</label>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="row">
-							<label class="col-xs-2">0</label>
-							<label class="col-xs-2">1</label>
-							<label class="col-xs-2">2</label>
-							<label class="col-xs-2">3</label>
-							<label class="col-xs-2">4</label>
-							<label class="col-xs-2">5</label>
-						</div>
-					</div>
-				</div>
-			@foreach($aspectos as $aspecto)
-				<div class="row">
-					<div class="col-xs-6">
-						<div class="row">
-							<div class="col-xs-6">{{ $aspecto->descripcion }}</div>
-							<hr>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<form>
-						<div class="row">
-							<div class="btn-group" data-toggle="buttons">
-								<div class="col-xs-2">
-									<label class="btn btn-fatal fatal">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-danger">
-							    		<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
-							  		</label> 
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-warning">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-medio medio">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-primary">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-success">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
-								  	</label>
-								</div>
-							</div>
-							<hr>
-						</div>
-					</div>
-				</div>
-			@endforeach
-				<div class="row">
-					<div class="col-xs-6">
-						<div class="row">
-							<label for="comentarios" class="col-xs-12">{{ trans('languaje.evaluacion3') }}</label>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="row">
-							<div class="col-xs-12">
-								<textarea placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<button class="btn btn-primary form-control" value="evaluar">{{ trans('languaje.evaluacion5') }}</button>
-					</div>
-				</div>
-			</div>
-			</form>
-			<div class="col-xs-3">
-				<div class="row">
-	                <div class="col-xs-12 classWithPad hidden-xs">
-	                    @include ('includes.acciones')
-	                </div>
-	            </div> 
-			</div>
-		</div>
-		</div>
-
-	</div><!--end-container-->
-
-	<!-- visible-xs-->
-		<div class="main wrapper clearfix visible-xs">
-		<div class="row">
-			<div class="col-xs-3">
+			<div class="col-xs-12 visible-xs">
 			  @foreach($proyectos as $key => $proyecto)
 			 <!-- <?php $idproyecto = $proyecto->id; ?>
 				<?php //echo $idproyecto; ?>-->
 			  	@if ($proyecto->id == 13) 
 			  	<!--controlar el id del proyecto a evaluar para mostrar la imagen en cuestion, así como el titulo y la descripcion-->
 	               <img <?php echo $height." ".$width; ?> src="cartel/{{ $proyecto->id }}"alt="Proyecto1">
-
+	               <!--<?php
+	               //$datosproyecto='';
+	               //$datosproyecto=($_GET['datosproyecto']);
+	               //echo $datosproyecto;
+	                ?>-->
 	               <div class="row">
 					<div class="col-xs-12">
 						<h3>{{ $proyecto->titol }}</h3>
@@ -204,93 +106,67 @@ $height='height="220px"';
 	            @endif
 	           @endforeach
 			</div>
-			<div class="col-xs-6">
-				<div class="row">
-					<div class="col-xs-6">
-						<div class="row">
-							<label for="concepto" class="col-xs-12">Concepto</label>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="row">
-							<label class="col-xs-2">0</label>
-							<label class="col-xs-2">1</label>
-							<label class="col-xs-2">2</label>
-							<label class="col-xs-2">3</label>
-							<label class="col-xs-2">4</label>
-							<label class="col-xs-2">5</label>
-						</div>
-					</div>
-				</div>
-			@foreach($aspectos as $aspecto)
-				<div class="row clearfix">
-					<div class="col-xs-6">
-						<div class="row">
-							<div class="col-xs-6">{{ $aspecto->descripcion }}</div>
-							<hr>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<form>
-						<div class="row">
-							<div class="btn-group" data-toggle="buttons">
-								<div class="col-xs-2">
-									<label class="btn btn-fatal fatal">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-danger">
-							    		<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
-							  		</label> 
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-warning">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-medio medio">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-primary">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
-								  	</label>
-								</div>
-								<div class="col-xs-2">
-									<label class="btn btn-success">
-								    	<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
-								  	</label>
-								</div>
+
+			<!-- Oculto al hacerse pequeño-->
+			<div class="col-xs-6 hidden-xs">
+				<form class = "form-horizontal">
+					<table class="table table-striped">
+						<tr class="info">
+							<th>Concepto</th>
+							<th>0</th>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+							<th>4</th>
+							<th>5</th>
+						</tr>
+				@foreach($aspectos as $aspecto)
+					<tr>
+						<td>
+							{{ $aspecto->descripcion }}
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
+						</td>
+					</tr>
+				@endforeach
+				</table>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<label for="comentarios" class="col-xs-12">{{ trans('languaje.evaluacion3') }}</label>
 							</div>
-							<hr>
 						</div>
-					</div>
-				</div>
-			@endforeach
-				<div class="row">
-					<div class="col-xs-6">
-						<div class="row">
-							<label for="comentarios" class="col-xs-12">Comentarios</label>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="row">
-							<div class="col-xs-12">
-								<textarea placeholder="añade un comentario sobre la evaluación" id="comentarios" name="comentarios"></textarea>
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-12">
+									<textarea placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<button class="btn btn-primary form-control" value="evaluar">Enviar Evaluacion</button>
+					<div class="row">
+						<div class="col-xs-12">
+							<button class="btn btn-primary form-control" value="evaluar">{{ trans('languaje.evaluacion5') }}</button>
+						</div>
 					</div>
-				</div>
-			</div>
-			</form>
+				</form>
+			</div>		
 			<div class="col-xs-3">
 				<div class="row">
 	                <div class="col-xs-12 classWithPad hidden-xs">
@@ -299,9 +175,69 @@ $height='height="220px"';
 	            </div> 
 			</div>
 		</div>
+		<!--Se hace visible al hacerlo pequeño-->
+		<div class="row visible-xs">
+			<div class="col-xs-12">
+				<form class = "form-horizontal">
+					<table class="table table-striped">
+						<tr class="info">
+							<th>Concepto</th>
+							<th>0</th>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+							<th>4</th>
+							<th>5</th>
+						</tr>
+				@foreach($aspectos as $aspecto)
+					<tr>
+						<td>
+							{{ $aspecto->descripcion }}
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
+						</td>
+						<td>
+							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
+						</td>
+					</tr>
+				@endforeach
+				</table>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<label for="comentarios" class="col-xs-12">{{ trans('languaje.evaluacion3') }}</label>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-12">
+									<textarea placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<button class="btn btn-primary form-control" value="evaluar">{{ trans('languaje.evaluacion5') }}</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
-
-	</div><!--end-container-->
+	</div>
 	<footer style="text-align: center; font-weight: bold;">
 			@include('includes.footer')
 	 </footer>
