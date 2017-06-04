@@ -68,8 +68,9 @@ return [
 
     'evaluacion1' => 'Formulario de evaluación',
     'evaluacion2' => 'Concepto',
-    'evaluacion3' => 'Añade un comentario sobre la evaluación',
-    'evaluacion4' => 'Enviar evaluación',
+    'evaluacion3' => 'Comentarios',
+    'evaluacion4' => 'Añade un comentario sobre la evaluación',
+    'evaluacion5' => 'Enviar evaluación',
 
 
 ];
