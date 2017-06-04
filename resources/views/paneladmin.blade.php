@@ -80,16 +80,17 @@
         <hr>
         <div class="row">
             <div class="col-xs-4">
-                <h3>{{ trans('languaje.adminarea10') }}</h3>
+                <h2>{{ trans('languaje.adminarea10') }}</h2>
                 <button type="submit" class="btn btn-danger" value="asignar">{{ trans('languaje.adminarea11') }}</button>
                 <hr class="visible-xs">
             </div>
             <div class="col-xs-8 hidden-xs">
                 <h3>{{ trans('languaje.adminarea12') }}</h3>
                 <table class="table table-hover">
-                    <tr class="danger"><th>{{ trans('languaje.adminarea13') }}</th><th>Email</th><th>Dni</th><!--<th>Acción</th>--></tr>
+                    <tr class="danger"><th>Id</th><th>{{ trans('languaje.adminarea13') }}</th><th>Email</th><th>Dni</th><!--<th>Acción</th>--></tr>
                 @foreach($participantes as $participante)
                 <tr>
+                    <td>{{ $participante->id }}</td>
                     <td>{{ $participante->nom }}</td>
                     <td>{{ $participante->email }}</td>
                     <td>{{ $participante->dni }}</td>
@@ -124,9 +125,10 @@
             <div class=" col-xs-12 visible-xs">
                 <h3>{{ trans('languaje.adminarea12') }}</h3>
                 <table class="table table-hover">
-                    <tr class="danger"><th>{{ trans('languaje.adminarea13') }}</th><th>Email</th><th>Dni</th><!--<th>Acción</th>--></tr>
+                    <tr class="danger"><th>Id</th><th>{{ trans('languaje.adminarea13') }}</th><th>Email</th><th>Dni</th><!--<th>Acción</th>--></tr>
                 @foreach($participantes as $participante)
                 <tr>
+                    <td>{{ $participante->id }}</td>
                     <td>{{ $participante->nom }}</td>
                     <td>{{ $participante->email }}</td>
                     <td>{{ $participante->dni }}</td>
@@ -134,6 +136,25 @@
                 </tr>
                 @endforeach
                 </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>{{ trans('languaje.adminarea14') }}</h3>
+                    <table class="table table-hover">
+                        <tr class="danger"><th>{{ trans('languaje.adminarea18') }}</th><th>{{ trans('languaje.adminarea15') }}</th><th>{{ trans('languaje.adminarea16') }}</th><th>{{ trans('languaje.adminarea17') }}</th></tr>
+                    @foreach($proyectos as $proyecto)
+                        <tr>
+                            <td>{{$proyecto->id_participant}}</td>
+                            <td>{{$proyecto->titol}}</td>
+                            <td>
+                                <img class="img-responsive" src="cartel/{{ $proyecto->id }}"alt="Proyecto1">
+                            </td>
+                            <td>{{ $proyecto->descripcion }}</td>
+                        </tr>
+
+                    @endforeach
+                    </table>
             </div>
         </div>
     </div> 

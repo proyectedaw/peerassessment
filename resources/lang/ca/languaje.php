@@ -80,9 +80,14 @@ return [
     'adminarea7' => 'Campanyes disponibles',
     'adminarea8' => 'Estat',
     'adminarea9' => 'Afegir',
-    'adminarea10' => 'Gestió d\'assignació',
+    'adminarea10' => 'Gestió d\'assignació de projectes',
     'adminarea11' => 'Iniciar assignació',
     'adminarea12' => 'Llista de participants',
     'adminarea13' => 'Nom',
+    'adminarea14' => 'Llista de projectes',
+    'adminarea15' => 'Títol',
+    'adminarea16' => 'Cartell',
+    'adminarea17' => 'Descripció',
+    'adminarea18' => 'Participant',
 
 ];

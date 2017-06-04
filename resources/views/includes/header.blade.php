@@ -22,9 +22,9 @@
                     </p>           
                 </ul>
                 <ul class="nav navbar-nav visible-xs">
-                    <li class="menu-item"><a href="formentregaproyecto">{{ trans('languaje.menuaccions1') }}</a></li>
-                    <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions2') }}</a></li>
+                    <li class="menu-item"><a href="formentregaproyecto">{{ trans('languaje.menuaccions2') }}</a></li>
                     <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions3') }}</a></li>
+                    <li class="menu-item"><a href="#">{{ trans('languaje.menuaccions4') }}</a></li>
                 </ul>
                  <ul class="nav navbar-nav navbar-form navbar-right">
                     <li class="btn-group usu-new">

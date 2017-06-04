@@ -81,10 +81,15 @@ return [
     'adminarea7' => 'Campañas disponibles',
     'adminarea8' => 'Estado',
     'adminarea9' => 'Añadir',
-    'adminarea10' => 'Gestión de asignación',
+    'adminarea10' => 'Gestión de asignación de proyectos',
     'adminarea11' => 'Iniciar asignación',
     'adminarea12' => 'Lista de participantes',
     'adminarea13' => 'Nombre',
+    'adminarea14' => 'Lista de proyectos',
+    'adminarea15' => 'Titulo',
+    'adminarea16' => 'Cartel',
+    'adminarea17' => 'Descripción',
+    'adminarea18' => 'Participante',
 
 
 ];
