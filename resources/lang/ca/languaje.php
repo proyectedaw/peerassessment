@@ -47,6 +47,10 @@ return [
 
     'login1' =>'Introdueix el teu E-mail',
     'login2' =>'Introdueix la teva contrasenya',
+    'loginadmin1' => 'Usuari Administrador',
+    'loginadmin2' => 'Introdueix el teu usari admin',
+    'loginadmin3' => 'Contrasenya',
+    'loginadmin4' => 'Introdueix la contrasenya d\'admin',
 
     'registro1' => 'Introdueix el teu DNI',
     'registro2' => 'Introdueix el teu nom',
@@ -63,7 +67,7 @@ return [
 
     'evaluacion1' => 'Formulari d\'evaluació',
     'evaluacion2' => 'Concepte',
-    'evaluacion3' => 'Comentaris',
+    'evaluacion3' => 'Comentaris', 
     'evaluacion4' => 'Afegeix un comentari sobre l\'evaluació',
     'evaluacion5' => 'Enviar evaluació',
 

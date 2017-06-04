@@ -48,6 +48,10 @@ return [
 
     'login1' => 'Introduce tu E-mail',
     'login2' => 'Introduce tu password',
+    'loginadmin1' => 'Usuario Administrador',
+    'loginadmin2' => 'Introduce tu usuario',
+    'loginadmin3' => 'Password',
+    'loginadmin4' => 'Introduce tu password',
 
     'registro1' => 'Introduce tu DNI',
     'registro2' => 'Introduce tu nombre',

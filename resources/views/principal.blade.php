@@ -329,6 +329,38 @@ h1, h2, h3{
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
+     <div class="modal fade" id="adminlogin">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                 <h2 class="modal-title" style="color: red;">Login Administrador: </h2>
+              </div>
+              <div class="modal-body">  
+                <form class="form-horizontal">
+                    <div class="form-group">
+                         <label for="adminuser" class="col-sm-4 control-label">{{ trans('languaje.loginadmin1') }}</label>
+                         <div class="col-sm-6">
+                             <input type="text" class="form-control" name="adminuser" id="adminuser" placeholder="{{ trans('languaje.loginadmin2') }}">
+                         </div>
+                    </div>
+                    <div class="form-group">
+                        <!-- <span class="input-group-addon" id="basic-addon1">Pass</span>-->
+                        <label for="adminpass" class="col-sm-4 control-label">{{ trans('languaje.loginadmin3') }}</label>
+                         <div class="col-sm-6">
+                             <input type="password" class="form-control" name="adminpass" id="adminpass" placeholder="{{ trans('languaje.loginadmin4') }}">
+                         </div>   
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-6">
+                            <button type="submit" class="btn btn-danger form-control" name="login" value="Login">Login</button>  
+                        </div>
+                    </div>                      
+                </form>
+              </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
     
 
     <!-- jQuery -->
@@ -346,7 +378,7 @@ h1, h2, h3{
     })
     </script>
     <footer style="text-align: center; font-weight: bold;">
-			@include('includes.footer')
+			<p>Copyright &copy; BielsaGarcia productions 2017</p> <a data-target="#adminlogin" data-toggle="modal" class="MainNavText" id="MainNavHelp" href="#adminlogin">Administrar</a>
 	 </footer>
 </body>
 
