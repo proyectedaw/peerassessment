@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    <title>Condiciones Evaluación</title>
+    <title>{{ trans('languaje.condieval1') }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,24 +35,25 @@
     <div class="container">
         <div class="row">
             <div class ="col-md-8 col-xs-12">
-                <h1>Condiciones de Evaluación</h1>
-                <h3>Puntos a tener en cuenta para llevar a cabo una correcta evaluación</h3>
+                <h1>{{ trans('languaje.condieval1') }}</h1>
+                <h3>{{ trans('languaje.condieval2') }}</h3>
                 <ul>
-                    <li>Fijarse bien en los detalles del cartel</li>
-                    <li>Comprobar si el cartel se rige por las normas de la campanya. Estipuladas abajo.</li>
-                    <li>Hacer una valoración subjetiva</li>
-                    <li>Se tendrán en cuenta los comentarios facilitados en la evaluación. Estos serán importantes para considerar una evaluación como justificada.</li>
-                    <li>No valorar en base a un nombre o a una descripción.</li>
+                    <li>{{ trans('languaje.condieval3') }}</li>
+                    <li>{{ trans('languaje.condieval4') }}</li>
+                    <li>{{ trans('languaje.condieval5') }}</li>
+                    <li>{{ trans('languaje.condieval6') }}</li>
+                    <li>{{ trans('languaje.condieval7') }}</li>
+                    <li>{{ trans('languaje.condieval8') }}</li>
                 </ul>
                 <div class="alert alert-info" role="alert">
-                    <span class="fa fa-info-circle"><strong>Normas para el cartel: </strong>
+                    <span class="fa fa-info-circle"><strong>{{ trans('languaje.condieval9') }}:</strong>
                     <ol>
-                        <li>Debe respetar el tema principal de la fiesta.</li>
-                        <li>Con una idea original.</li>
-                        <li>Debe representar la multiculturalidad de la ciudad.</li>
-                        <li>De colores llamativos pero no estridentes.</li>
-                        <li>De medidas proporcionadas.</li>
-                        <li>Enmarcado con los logos pertinentes de el Ajuntamiento de Barcelona. Preferiblemente al pie del cartel.</li>
+                        <li>{{ trans('languaje.condieval10') }}</li>
+                        <li>{{ trans('languaje.condieval11') }}</li>
+                        <li>{{ trans('languaje.condieval12') }}</li>
+                        <li>{{ trans('languaje.condieval13') }}</li>
+                        <li>{{ trans('languaje.condieval14') }}</li>
+                        <li>{{ trans('languaje.condieval15') }}</li>
                     </ol>
                     </span>
                </div>       

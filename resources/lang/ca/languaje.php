@@ -17,7 +17,7 @@ return [
     'menuaccions1' => 'Accions',
     'menuaccions2' => 'Pujar/evaluar',
     'menuaccions3' => 'Definir pseudonim',
-    'menuaccions4' => 'Condicions d\'evaluació',
+    'menuaccions4' => 'Condicions d\'avaluació',
 
     'principal0' => 'Campanya inici',
     'principal1' => 'INICI',
@@ -65,10 +65,10 @@ return [
     'registro11' => 'Confirmar',
     'registro12' => 'Registrarse',
 
-    'evaluacion1' => 'Formulari d\'evaluació',
+    'evaluacion1' => 'Formulari d\'avaluació',
     'evaluacion2' => 'Concepte',
     'evaluacion3' => 'Comentaris', 
-    'evaluacion4' => 'Afegeix un comentari sobre l\'evaluació',
+    'evaluacion4' => 'Afegeix un comentari sobre l\'avaluació',
     'evaluacion5' => 'Enviar evaluació',
 
     'adminarea1' => 'Afegir aspectes',
@@ -90,5 +90,22 @@ return [
     'adminarea17' => 'Descripció',
     'adminarea18' => 'Participant',
     'adminarea19' => 'Aspectes disponibles',
+
+    'condieval1' => 'Condicions d\'Avaluació',
+    'condieval2' => 'Punts a tenir en consideració per dur a terme una correcta avaluació: ',
+    'condieval3' => 'Fixar-se bé en els detalls del cartell i valorar-los',
+    'condieval4' => 'Comprovar si el cartell se regeix por les normes de la campanya. Estipulades més avall.',
+    'condieval5' => 'Fer una valoració subjectiva.',
+    'condieval6' => 'Es tindran en compte els comentaris facilitats en l\'avaluació. Aquets  seran importants per considerar una avaluació com justificada.',
+    'condieval7' => 'No valorar en base a un nom o a una descripció del cartell.',
+    'condieval8' => 'Pensar en com quedaria aquell cartel a mida gegant i repartir per tota la ciutat.',
+    'condieval9' => 'Normes per el cartell',
+    'condieval10' => 'Cal que respecti la temàtica principal de la festa.',
+    'condieval11' => 'Amb una idea original.',
+    'condieval12' => 'Cal representar la multiculturalitat de la ciutat.',
+    'condieval13' => 'De colors cridaners però no estridents.',
+    'condieval14' => 'De mides proporcionades.',
+    'condieval15' => 'Emmarcat amb els logos pertinents de l\'Ajuntament de Barcelona. Preferiblement al peu del cartell.',
+
 
 ];

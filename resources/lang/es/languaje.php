@@ -92,5 +92,22 @@ return [
     'adminarea18' => 'Participante',
     'adminarea19' => 'Aspectos disponibles',
 
+    'condieval1' => 'Condiciones de Evaluación',
+    'condieval2' => 'Puntos a tener en cuenta para llevar a cabo una correcta evaluación: ',
+    'condieval3' => 'Fijarse bien en los detalles del cartel y valoralos',
+    'condieval4' => 'Comprobar si el cartel se rige por las normas de la campaña. Estipuladas abajo.',
+    'condieval5' => 'Hacer una valoración subjetiva.',
+    'condieval6' => 'Se tendrán en cuenta los comentarios facilitados en la evaluación. Estos serán importantes para considerar una evaluación como justificada.',
+    'condieval7' => 'No valorar en base a un nombre o a una descripción.',
+    'condieval8' => 'Pensar en como quedaría ese cartel a tamaño gigante y repartido por toda la ciudad.',
+    'condieval9' => 'Normas para el cartel',
+    'condieval10' => 'Debe respetar la temática principal de la fiesta.',
+    'condieval11' => 'Con una idea original.',
+    'condieval12' => 'Debe representar la multiculturalidad de la ciudad.',
+    'condieval13' => 'De colores llamativos pero no estridentes.',
+    'condieval14' => 'De medidas proporcionadas.',
+    'condieval15' => 'Enmarcado con los logos pertinentes de el Ajuntamiento de Barcelona. Preferiblemente al pie del cartel.',
+
+
 
 ];
