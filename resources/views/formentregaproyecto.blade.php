@@ -32,9 +32,43 @@
     <header>
         @include('includes.header')
     </header>
-    <div class="container row">
+    <div class="container">
        <!-- <div class="row">-->
-            <div class="col-md-8 col-xs-12">
+            <div class="col-xs-8 hidden-xs">
+                <h2>{{ trans('languaje.formentrega1') }} </h2>
+                {!! Form::open(array('url' => 'add', 'files'=>true, 'class' => 'form-horizontal')) !!}
+                    <!--<form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ action('ImageController@savePicture') }}">-->
+                    <div class="form-group">
+                        <label for="titol" class="col-sm-4 control-label">{{ trans('languaje.formentrega2') }}</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="titol" id="titol" placeholder="{{ trans('languaje.formentrega3') }}">
+                        </div>
+                         
+                    </div>
+                    <div class="form-group">
+                        <label for="cartel" class="col-sm-4 control-label">{{ trans('languaje.formentrega4') }}</label>
+                        <div class="col-md-6">
+                            <input type="file" class="filestyle" data-buttonText="{{ trans('languaje.formentrega9') }}" name="cartel" id="cartel">
+                        </div> 
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        <span class="fa fa-info-circle"><strong>{{ trans('languaje.formentrega5') }}</strong> {{ trans('languaje.formentrega6') }}</span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="coments" class="col-sm-4 control-label">{{ trans('languaje.formentrega7') }}</label>
+                        <div class="col-md-6">
+                            <textarea class="form-control" name="coments" id="coments" placeholder="{{ trans('languaje.formentrega8') }}"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-6">
+                            <input type="submit" class="btn btn-primary form-control" value="Entregar" id="entregar" name="entregar">
+                             <!--{!! Form::submit('Entregar') !!}-->
+                        </div>
+                    </div>
+            </div>
+            <div class="col-xs-12 visible-xs">
                 <h2>{{ trans('languaje.formentrega1') }} </h2>
                 {!! Form::open(array('url' => 'add', 'files'=>true, 'class' => 'form-horizontal')) !!}
                     <!--<form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ action('ImageController@savePicture') }}">-->
