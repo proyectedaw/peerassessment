@@ -23,7 +23,7 @@ class EvaluacionController extends Controller
 
         //recoger el proyecto en cuestion y pasarlo a la vista evaluación. Es decir recoger el id del proyecto a evaluar y mostrar los datos de ese proyecto
 
-        return view('evaluacion', compact(['proyectos', 'campanyas', 'pseudonimos', 'aspectos']));//, $idproyecto]));
+        return view('evaluacion', compact(['proyectos', 'campanyas', 'aspectos']));//, $idproyecto]));
         /*
          $proyectos = DB::table('proyectos')
             ->join('pseudonimos', 'users.id', '=', 'contacts.user_id')
@@ -31,6 +31,13 @@ class EvaluacionController extends Controller
             ->select('users.*', 'contacts.phone', 'orders.price')
             ->get();
         */
+    }
+    public function condicioneseval()
+    {
+        $proyectos = Proyecto::all();
+        $campanyas = Campanya::all();
+
+         return view('condicioneseval', compact(['proyectos', 'campanyas']));
     }
     /*public function satisfactoria()
     {

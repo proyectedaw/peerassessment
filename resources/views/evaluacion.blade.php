@@ -55,7 +55,7 @@ $height='height="220px"';
     	@include('includes.header')
     </header>
 	<h1>{{ trans('languaje.evaluacion1') }}</h1>
-	<div class="container container-table">
+	<div class="container">
 		<div class="row">
 			<div class="col-xs-3 hidden-xs">
 			  @foreach($proyectos as $key => $proyecto)

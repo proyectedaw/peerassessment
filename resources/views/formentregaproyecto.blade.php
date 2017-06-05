@@ -34,7 +34,7 @@
     </header>
     <div class="container row">
        <!-- <div class="row">-->
-            <div class="col-xs-8">
+            <div class="col-md-8 col-xs-12">
                 <h2>{{ trans('languaje.formentrega1') }} </h2>
                 {!! Form::open(array('url' => 'add', 'files'=>true, 'class' => 'form-horizontal')) !!}
                     <!--<form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ action('ImageController@savePicture') }}">-->
