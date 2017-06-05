@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Participante;
 use App\Campanya;
 use App\Proyecto;
+use App\Aspecto;
 
 class ParticipanteController extends Controller
 {
@@ -25,8 +26,9 @@ class ParticipanteController extends Controller
         $participantes = Participante::all();
         $campanyas = Campanya::all();
         $proyectos = Proyecto::all();
+        $aspectos = Aspecto::all();
 
-        return view('paneladmin', compact('participantes','campanyas','proyectos'));
+        return view('paneladmin', compact('participantes','campanyas','proyectos','aspectos'));
     }
 
     /**

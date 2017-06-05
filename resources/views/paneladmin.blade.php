@@ -34,7 +34,7 @@
    
     <div class="container">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-12 col-sm-5">
                 <h2>{{ trans('languaje.adminarea1') }}</h2>
                 <form class = "form-horizontal">
                     <div class="form-group">
@@ -57,6 +57,16 @@
                     </div>
                 </form>
             </div>
+            <div class="col-xs-3 hidden-xs">
+                <table class="table table-hover">
+                    <tr class="danger"><th>{{ trans('languaje.adminarea19') }}</th></tr>
+                    @foreach ($aspectos as $aspecto)
+                        <tr>
+                            <td>{{ $aspecto-> descripcion }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
             <div class="col-xs-4 hidden-xs">
                 <h2>{{ trans('languaje.adminarea6') }}</h2>
                 <h3>{{ trans('languaje.adminarea7') }}:</h3>
@@ -78,6 +88,18 @@
             </div> 
         </div>
         <hr>
+        <div class="row visible-xs">
+            <div class="col-xs-12">
+                <table class="table table-hover">
+                    <tr class="danger"><th>{{ trans('languaje.adminarea19') }}</th></tr>
+                    @foreach ($aspectos as $aspecto)
+                        <tr>
+                            <td>{{ $aspecto-> descripcion }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
+        </div>
         <div class="row">
             <div class="col-xs-4">
                 <h2>{{ trans('languaje.adminarea10') }}</h2>

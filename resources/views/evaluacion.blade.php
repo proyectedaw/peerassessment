@@ -209,7 +209,7 @@ $height='height="220px"';
 					</tr>
 				@endforeach
 				</table>
-					<div class="row">
+					<div class="container">
 						<div class="form-group">
 							<label for="comentarios" class="col-sm-4 control-label">{{ trans('languaje.evaluacion3') }}</label>
 							<div class="col-md-6">

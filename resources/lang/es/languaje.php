@@ -90,6 +90,7 @@ return [
     'adminarea16' => 'Cartel',
     'adminarea17' => 'Descripción',
     'adminarea18' => 'Participante',
+    'adminarea19' => 'Aspectos disponibles',
 
 
 ];
