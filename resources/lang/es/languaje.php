@@ -108,6 +108,13 @@ return [
     'condieval14' => 'De medidas proporcionadas.',
     'condieval15' => 'Enmarcado con los logos pertinentes de el Ajuntamiento de Barcelona. Preferiblemente al pie del cartel.',
 
+    'areaparti1' => 'Bienvenido al Área del Participante',
+    'areaparti2' => 'Definir psedonimo',
+    'areaparti3' => 'Pseudonimo',
+    'areaparti4' => 'Introduce un psedonimo',
+    'areaparti5' => 'Añadir',
+
+
 
 
 ];

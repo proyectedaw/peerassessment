@@ -107,5 +107,11 @@ return [
     'condieval14' => 'De mides proporcionades.',
     'condieval15' => 'Emmarcat amb els logos pertinents de l\'Ajuntament de Barcelona. Preferiblement al peu del cartell.',
 
+    'areaparti1' => 'Benvingut al Àrea del Participant',
+    'areaparti2' => 'Definir psedonim',
+    'areaparti3' => 'Pseudonim',
+    'areaparti4' => 'Introdueix un psedonim',
+    'areaparti5' => 'Afegir',
+
 
 ];

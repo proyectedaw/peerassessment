@@ -34,10 +34,41 @@
    
     <div class="container">
         <div class="row">
-            <div class ="col-xs-8">
-                <h1>INFO Campaña</h1>
-                <p>col-md-offset-1 The much-travelled craftsman prefers to reside wherever the song takes him, from writing room to rehearsal space, recording studio to concert hall. He is, as tirelessly and inquisitively as ever, on the trail of some musical truth, just as he has been since the 45s of Ricky Nelson and Lonnie Donegan, or the playing of Hank Marvin and Duane Eddy, sent him down a path that led to 125 million record sales.</p>
-                <p>That approach to his life’s work is how the title of his new, eighth solo album (not counting a myriad of collaborations, productions and film soundtracks) came into being. It’s the other half, if you like, of his typically acclaimed double set Privateering, which graced top tens throughout Europe and beyond in 2012.</p>
+            <div class ="col-xs-8 hidden-xs">
+                <h1>{{ trans('languaje.areaparti1') }}</h1>
+                <h3>{{ trans('languaje.areaparti2') }}</h3>
+                <form class = "form-horizontal">
+                    <div class="form-group">
+                        <label for="aspecto" class="col-sm-4 control-label">{{ trans('languaje.areaparti3') }}</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="{{ trans('languaje.areaparti4') }}">
+                        </div>                      
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-6">
+                            <input type="submit" class="btn btn-primary form-control" value="{{ trans('languaje.areaparti5') }}" id="addpseudo" name="addpseudo">
+                             <!--{!! Form::submit('Entregar') !!}-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class ="col-xs-12 visible-xs">
+                <h1>{{ trans('languaje.areaparti1') }}</h1>
+                <h3>{{ trans('languaje.areaparti2') }}</h3>
+                <form class = "form-horizontal">
+                    <div class="form-group">
+                        <label for="aspecto" class="col-sm-4 control-label">{{ trans('languaje.areaparti3') }}</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="{{ trans('languaje.areaparti4') }}">
+                        </div>                      
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-6">
+                            <input type="submit" class="btn btn-primary form-control" value="{{ trans('languaje.areaparti5') }}" id="addpseudo" name="addpseudo">
+                             <!--{!! Form::submit('Entregar') !!}-->
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="col-xs-4">
                 <div class="row">
