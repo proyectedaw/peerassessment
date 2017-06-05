@@ -24,29 +24,30 @@ $height='height="220px"';
     <link href="{{ URL::asset('css/half-slider.css')}}" rel="stylesheet">
 
     <style type="text/css">
-    .medio {
-    	background-color: #FFFF5C;
-    }
 
-.btn-medio:hover, .btn-medio:focus, .btn-medio, .btn-medio., .open > .dropdown-toggle.btn-medio {
-    background: black;
-}
-    .fatal {
-    	background-color: #BF0000; /*#BF0000*/
-    }
-
-.btn-fatal:hover, .btn-fatal:focus, .btn-fatal, .btn-fatal., .open > .dropdown-toggle.btn-fatal {
-    background: yellow; /*#8B0000*/
-}
     .classWithPad { 
         /*margin:10px; padding:10px; left: 160px */
         position:absolute;
         left:25%;
-    }
-.border{
-	border: 2px solid black;
-}
- 
+	}
+	#id0{
+		background-color: #ff9898;
+	}
+	#id1{
+		background-color: #ffbdbd;
+	}
+	#id2{
+		background-color: #ffdfa3;
+	}
+	#id3{
+		background-color: #fffdc9;
+	}
+	#id4{
+		background-color: #bcbcff;
+	}
+	#id5{
+		background-color: #d4f9c0;
+	}
     </style>
 </head>
 <body>
@@ -106,13 +107,12 @@ $height='height="220px"';
 	            @endif
 	           @endforeach
 			</div>
-
 			<!-- Oculto al hacerse pequeño-->
 			<div class="col-xs-6 hidden-xs">
 				<form class = "form-horizontal">
 					<table class="table table-striped">
 						<tr class="info">
-							<th>Concepto</th>
+							<th>{{ trans('languaje.evaluacion2') }}</th>
 							<th>0</th>
 							<th>1</th>
 							<th>2</th>
@@ -125,38 +125,32 @@ $height='height="220px"';
 						<td>
 							{{ $aspecto->descripcion }}
 						</td>
-						<td>
+						<td id="id0">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
 						</td>
-						<td>
+						<td id="id1">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
 						</td>
-						<td>
+						<td id="id2">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
 						</td>
-						<td>
+						<td id="id3">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
 						</td>
-						<td>
+						<td id="id4">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
 						</td>
-						<td>
+						<td id="id5">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
 						</td>
 					</tr>
 				@endforeach
 				</table>
 					<div class="row">
-						<div class="col-xs-6">
-							<div class="row">
-								<label for="comentarios" class="col-xs-12">{{ trans('languaje.evaluacion3') }}</label>
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="row">
-								<div class="col-xs-12">
-									<textarea placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
-								</div>
+						<div class="form-group">
+							<label for="comentarios" class="col-sm-4 control-label">{{ trans('languaje.evaluacion3') }}</label>
+							<div class="col-md-6">
+								<textarea class= "form-control" placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
 							</div>
 						</div>
 					</div>
@@ -194,38 +188,32 @@ $height='height="220px"';
 						<td>
 							{{ $aspecto->descripcion }}
 						</td>
-						<td>
+						<td id="id0">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
 						</td>
-						<td>
+						<td id="id1">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
 						</td>
-						<td>
+						<td id="id2">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
 						</td>
-						<td>
+						<td id="id3">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
 						</td>
-						<td>
+						<td id="id4">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
 						</td>
-						<td>
+						<td id="id5">
 							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
 						</td>
 					</tr>
 				@endforeach
 				</table>
 					<div class="row">
-						<div class="col-xs-6">
-							<div class="row">
-								<label for="comentarios" class="col-xs-12">{{ trans('languaje.evaluacion3') }}</label>
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="row">
-								<div class="col-xs-12">
-									<textarea placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
-								</div>
+						<div class="form-group">
+							<label for="comentarios" class="col-sm-4 control-label">{{ trans('languaje.evaluacion3') }}</label>
+							<div class="col-md-6">
+								<textarea class= "form-control" placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
 							</div>
 						</div>
 					</div>
