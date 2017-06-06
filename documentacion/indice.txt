@@ -1,0 +1,114 @@
+Introducción OK
+1.Tecnologias y lenguajes usados. Mapa de software implantat (relació entre el software i el hardware en el què s’ha implantat) 
+2.Estudi de viabilitat
+3.Similitudes con otros proyectos
+4.Que es un Framework? Hablar aquí del usado. Laravel. OK
+5.Que es el peer assessment? OK
+6.Definición del proyecto
+	Objetivos
+	Requisitos
+7.Implementación
+Dividirlo en funcionalidades de la app.
+	- Vistas
+	- Controladores (funcion asignacion, evaluacion)
+	-Multiidioma
+Base de datos
+Conclusión
+Bibliografia
+
+https://dashboard.fortrabbit.com/login
+
+
+Bibliografia sobre peer Assessment.
+http://ww2.educarchile.cl/Portal.Base/Web/VerContenido.aspx?GUID=3f3203a8-0615-435d-8130-1ea019104c54&ID=224272
+http://www.revistaeducacion.mec.es/doi/359_092.pdf
+https://en.wikipedia.org/wiki/Peer_assessment
+https://es.wikipedia.org/wiki/R%C3%BAbrica_(docencia)
+http://mooc.crifacacias.es/2016/11/11/beneficios-de-la-evaluacion-entre-pares/
+https://yaninaarias.wikispaces.com/Ventajas+y+desventajas+de+la+evaluacion+entre+pares+y+autoevaluacion
+
+Bibliografia framework
+
+https://es.wikipedia.org/wiki/Framework
+
+Bibliografia Laravel:
+https://es.wikipedia.org/wiki/Active_record
+https://en.wikipedia.org/wiki/Composer_(software)
+https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes
+https://es.wikipedia.org/wiki/Laravel
+https://laravel.com/docs/5.0/eloquent#introduction
+https://laravel.com/docs/5.4/migrations
+
+bibliografia imagenesdblaravel:
+
+Explicar todo lo necesario para poder guardar imagenes en la base de datos, y visualizarlas, particularidades de hacerlo con laravel. Ventajas de guardar imgs en db. 
+
+https://stackoverflow.com/questions/32795154/laravel-5-class-collective-html-htmlserviceprovider-not-found-on-aws
+http://image.intervention.io/getting_started/installation
+http://www.core45.com/using-database-to-store-images-in-laravel-5-1/
+https://stackoverflow.com/questions/27374613/laravel-intervention-image-class-class-not-found
+https://stackoverflow.com/questions/28541051/class-illuminate-html-htmlserviceprovider-not-found-laravel-5
+https://stackoverflow.com/questions/28984369/adding-form-action-in-html-in-laravel
+http://www.easylaravelbook.com/blog/2015/04/08/processing-file-uploads-with-laravel-5/
+
+Para validar:
+https://mattstauffer.co/blog/image-dimension-validation-rules-in-laravel-5-3
+
+añadir en composer.json en "require"
+
+Tareas pendientes:
+
+- Multiidioma
+- Mensajes de todo ok al subir proyecto.
+- Validar imagenes, tamaño y tipo
+- Responsive. OK
+- definir psedonimo (formulario de creacion de pseudonimo)
+- guardar el nombre del usuario y pintarlo arriba
+- tema de asignacion de proyectos (tras la asignacion, mostrar a cada usuario (evaluacionproyecto)
+- Pasar los datos del proyecto a evaluar, evaluarlo y guardar las notas de evaluación en la db.
+- Leer los aspectos de la base de datos y que pinte cada linea segun el numero de aspectos que haya.
+Opcion, darle poder al admin para añadirlos, en lugar de añadirlos desde la db. Definir las fechas para período de subida y evaluación. Botón para hacer asignación.
+- En la vista evaluacion, mostrar la imagen del proyecto, nombre y descripción del proyecto a evaluar, pasar los datos de este a la siguiente vista.
+	- El tema de los periodos, es decir, tiempo determinado para subir proyectos
+	- Tiempo determinado para evaluar.
+- Subir proyecto a Githup (Mirar de hacerlo en Windows)
+-Juntar los dos proyectos (login, registro y asignación de proyectos)!!!!!
+
+Bibliografia de github:
+
+http://codehero.co/git-desde-cero-instalacion-configuracion-y-comandos-basicos/
+https://desktop.github.com/
+https://git-scm.com/book/es/v1/Empezando-Instalando-Git
+https://git-scm.com/book/es/v1/Empezando-Configurando-Git-por-primera-vez
+https://coderwall.com/p/7begkw/fatal-remote-error-you-can-t-push-to-git
+https://stackoverflow.com/questions/10298291/cannot-push-to-github-keeps-saying-need-merge
+https://help.github.com/articles/pushing-to-a-remote/
+
+------------------
+http://laravel-recipes.com/recipes/256/assigning-a-variable-in-a-blade-template
+https://scotch.io/tutorials/simple-laravel-layouts-using-blade
+------------------
+https://laravel.com/docs/5.4/redirects
+
+https://laracasts.com/discuss/channels/general-discussion/access-my-laravel-site-on-another-computer-on-the-same-network
+
+Bibliografia multiidoma:
+
+https://styde.net/como-usar-el-componente-de-traducciones-de-laravel/
+https://styde.net/aplicacion-multilenguaje-en-laravel-5-1/
+
+***********************
+Tareas viernes 02/06:
+-responsive OK. Evaluacion, mirar como esta la div acciones. OK
+-pasar los aspectos de la db a la evaluación, pintar una linea por cada aspecto. OK
+-instalar git en windows y hacer pruebas de subidas
+-Intentar recoger resultados de la evaluación.
+(Para ello, para el correcto funcionamiento segun la bd. al darle al boton de evaluar:
+	-Debe añadirse nuevo registro en tabla evaluaciones, donde se guarda el id_participante, id_proyecto y los comentarios
+	- Además rellenar tabla relaciones_evaluacion_aspecto con la nota de cada radiobutton
+
+Domingo:
+vista admin, boton admin (modal con login) OK
+acciones de añadir aspectos, iniciar proceso de asignación, etc. OK (falta programar)
+Areglar responsive, evaluacion. OK
+Documentacion (memoria)
