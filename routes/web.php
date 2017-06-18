@@ -66,7 +66,7 @@ Route::get('formentregaproyecto','CampanyaController@campanyactivaformp');
 
 //Rutas al controlador de imagenes:
 
-Route::get('cartel', 'ImageController@showPictureList');
+//Route::get('cartel', 'ImageController@showPictureList');
 Route::get('cartel/{id}', 'ImageController@showPicture');
 Route::get('formentregaproyecto', 'ImageController@addPicture');
 
