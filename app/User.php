@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+    'nombre', 'apellido_1', 'apellido_2', 'dni', 'pseudonimo', 'email', 'password','admin',
     ];
 
     /**
@@ -24,6 +24,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+    'password', 'remember_token',
     ];
+
+    public function proyectos()
+    {
+      return $this->hasOne('App\Proyecto');
+  }
 }

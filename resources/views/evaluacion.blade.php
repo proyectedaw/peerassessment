@@ -1,10 +1,3 @@
-<?php 
-
-$width='width="190px"';
-$height='height="220px"';
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +6,6 @@ $height='height="220px"';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
-  	<link rel="shortcut icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
-
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
 
@@ -23,212 +13,220 @@ $height='height="220px"';
     <!-- Custom CSS -->
     <link href="{{ URL::asset('css/half-slider.css')}}" rel="stylesheet">
 
-    <style type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+    .medio {
+    	background-color: #FFFF5C;
+    }
+
+.btn-medio:hover, .btn-medio:focus, .btn-medio:, .btn-medio., .open > .dropdown-toggle.btn-medio {
+    background: Yellow;
+}
     .classWithPad { 
         /*margin:10px; padding:10px; left: 160px */
         position:absolute;
         left:25%;
-	}
-	#id0{
-		background-color: #ff9898;
-	}
-	#id1{
-		background-color: #ffbdbd;
-	}
-	#id2{
-		background-color: #ffdfa3;
-	}
-	#id3{
-		background-color: #fffdc9;
-	}
-	#id4{
-		background-color: #bcbcff;
-	}
-	#id5{
-		background-color: #d4f9c0;
-	}
+    }
+ 
     </style>
 </head>
 <body>
-     <header>
-    	@include('includes.header')
+    <header>
+        <div class="topfix">      
+    <div class="navbar" role="navigation" style="background-color: navy">
+      <div class="container"> 
+        <ul class="nav navbar-nav navbar-right">                           
+            <li class="btn-group usu-new">
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target=".desconectar">Nombre participante</button>
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target=".desconectar">LOGOUT</button>
+
+              <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target=".desconectar"><i class="fa fa-power-off"></i></button>-->
+            </li>
+        </ul>
+        
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="menu-item"><a href="#">INICIO</a></li>
+                <li class="menu-item"> 
+                @foreach ($campanyas as $campanya)
+                @if ($campanya->activa)
+                <a href="#">Campaña activa: {{ $campanya->nombre }}</a>
+                @endif
+                @endforeach
+                </li>
+                
+            </ul>
+
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-->
+    </div><!--/.navbar-->         
+    </div>
     </header>
-	<h1>{{ trans('languaje.evaluacion1') }}</h1>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-3 hidden-xs">
-			  @foreach($proyectos as $key => $proyecto)
-			 <!-- <?php $idproyecto = $proyecto->id; ?>
-				<?php //echo $idproyecto; ?>-->
-			  	@if ($proyecto->id == 13) 
-			  	<!--controlar el id del proyecto a evaluar para mostrar la imagen en cuestion, así como el titulo y la descripcion-->
-	               <img <?php echo $height." ".$width; ?> src="cartel/{{ $proyecto->id }}"alt="Proyecto1">
-	               <!--<?php
-	               //$datosproyecto='';
-	               //$datosproyecto=($_GET['datosproyecto']);
-	               //echo $datosproyecto;
-	                ?>-->
-	               <div class="row">
-					<div class="col-xs-12">
-						<h3>{{ $proyecto->titol }}</h3>
-					</div>
-					</div>
-					<div class="row">
-					<div class="col-xs-12">
-						<h3>{{ $proyecto->descripcion }}</h3>
-					</div>
-					</div>
-	            @endif
-	           @endforeach
-			</div>
-			<div class="col-xs-12 visible-xs">
-			  @foreach($proyectos as $key => $proyecto)
-			 <!-- <?php $idproyecto = $proyecto->id; ?>
-				<?php //echo $idproyecto; ?>-->
-			  	@if ($proyecto->id == 13) 
-			  	<!--controlar el id del proyecto a evaluar para mostrar la imagen en cuestion, así como el titulo y la descripcion-->
-	               <img <?php echo $height." ".$width; ?> src="cartel/{{ $proyecto->id }}"alt="Proyecto1">
-	               <!--<?php
-	               //$datosproyecto='';
-	               //$datosproyecto=($_GET['datosproyecto']);
-	               //echo $datosproyecto;
-	                ?>-->
-	               <div class="row">
-					<div class="col-xs-12">
-						<h3>{{ $proyecto->titol }}</h3>
-					</div>
-					</div>
-					<div class="row">
-					<div class="col-xs-12">
-						<h3>{{ $proyecto->descripcion }}</h3>
-					</div>
-					</div>
-	            @endif
-	           @endforeach
-			</div>
-			<!-- Oculto al hacerse pequeño-->
-			<div class="col-xs-6 hidden-xs">
-				<form class = "form-horizontal">
-					<table class="table table-striped">
-						<tr class="info">
-							<th>{{ trans('languaje.evaluacion2') }}</th>
-							<th>0</th>
-							<th>1</th>
-							<th>2</th>
-							<th>3</th>
-							<th>4</th>
-							<th>5</th>
-						</tr>
-				@foreach($aspectos as $aspecto)
-					<tr>
-						<td>
-							{{ $aspecto->descripcion }}
-						</td>
-						<td id="id0">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
-						</td>
-						<td id="id1">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
-						</td>
-						<td id="id2">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
-						</td>
-						<td id="id3">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
-						</td>
-						<td id="id4">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
-						</td>
-						<td id="id5">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
-						</td>
-					</tr>
-				@endforeach
-				</table>
-					<div class="row">
-						<div class="form-group">
-							<label for="comentarios" class="col-sm-4 control-label">{{ trans('languaje.evaluacion3') }}</label>
-							<div class="col-md-6">
-								<textarea class= "form-control" placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<button class="btn btn-primary form-control" value="evaluar">{{ trans('languaje.evaluacion5') }}</button>
-						</div>
-					</div>
-				</form>
-			</div>		
-			<div class="col-xs-3">
+	<h1>Formulario de evaluacion</h1>
+	<div class="container container-table">
+	<div class="row">
+		<div class="col-md-8">
+				<form>
+		
 				<div class="row">
-	                <div class="col-xs-12 classWithPad hidden-xs">
-	                    @include ('includes.acciones')
-	                </div>
-	            </div> 
-			</div>
-		</div>
-		<!--Se hace visible al hacerlo pequeño-->
-		<div class="row visible-xs">
-			<div class="col-xs-12">
-				<form class = "form-horizontal">
-					<table class="table table-striped">
-						<tr class="info">
-							<th>Concepto</th>
-							<th>0</th>
-							<th>1</th>
-							<th>2</th>
-							<th>3</th>
-							<th>4</th>
-							<th>5</th>
-						</tr>
-				@foreach($aspectos as $aspecto)
-					<tr>
-						<td>
-							{{ $aspecto->descripcion }}
-						</td>
-						<td id="id0">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option0" value="0" autocomplete="off">
-						</td>
-						<td id="id1">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option1" value="1" autocomplete="off">
-						</td>
-						<td id="id2">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option2" value="2" autocomplete="off">
-						</td>
-						<td id="id3">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option3" value="3" autocomplete="off">
-						</td>
-						<td id="id4">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option4" value="4" autocomplete="off">
-						</td>
-						<td id="id5">
-							<input type="radio" name="eval{{ $aspecto->id }}" id="eval{{ $aspecto->id }}-option5" value="5" autocomplete="off">
-						</td>
-					</tr>
-				@endforeach
-				</table>
-					<div class="container">
-						<div class="form-group">
-							<label for="comentarios" class="col-sm-4 control-label">{{ trans('languaje.evaluacion3') }}</label>
-							<div class="col-md-6">
-								<textarea class= "form-control" placeholder="{{ trans('languaje.evaluacion4') }}" id="comentarios" name="comentarios"></textarea>
-							</div>
-						</div>
+					<div class="col-xs-2">
+						0
 					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<button class="btn btn-primary form-control" value="evaluar">{{ trans('languaje.evaluacion5') }}</button>
-						</div>
+					<div class="col-xs-2">
+						1
 					</div>
-				</form>
-			</div>
+					<div class="col-xs-2">
+						2
+					</div>
+					<div class="col-xs-2">
+						3
+					</div>
+					<div class="col-xs-2">
+						4
+					</div>
+					<div class="col-xs-2">
+						5
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+				       <div class="btn-group" data-toggle="buttons">
+				         <label for="eval1" class="col-sm-4 control-label">eval1</label>
+				         	<label class="btn btn-danger ">
+					    		<input type="radio" name="option1" id="option1" value="1" autocomplete="off">
+					  		</label> 
+					  		<label class="btn btn-warning">
+						    	<input type="radio" name="option2" id="option2" value="1" autocomplete="off">
+						  	</label>
+						  	<label class="btn btn-medio medio">
+						    	<input type="radio" name="option3" id="option3" value="1" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-primary">
+						    	<input type="radio" name="option4" id="option4" value="1" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-success">
+						    	<input type="radio" name="option5" id="option5" value="1" autocomplete="off">
+						  	</label>
+				        </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="btn-group" data-toggle="buttons">
+				         <label for="eval1" class="col-sm-4 control-label">eval2</label>
+				         	<label class="btn btn-danger ">
+					    		<input type="radio" name="options" id="option1" autocomplete="off">
+					  		</label> 
+					  		<label class="btn btn-warning">
+						    	<input type="radio" name="options" id="option2" autocomplete="off">
+						  	</label>
+						  	<label class="btn btn-medio medio">
+						    	<input type="radio" name="options" id="option3" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-primary">
+						    	<input type="radio" name="options" id="option4" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-success">
+						    	<input type="radio" name="options" id="option5" autocomplete="off">
+						  	</label>
+				        </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+				        <div class="btn-group" data-toggle="buttons">
+				         <label for="eval1" class="col-sm-4 control-label">eval3</label>
+				         	<label class="btn btn-danger ">
+					    		<input type="radio" name="options" id="option1" autocomplete="off">
+					  		</label> 
+					  		<label class="btn btn-warning">
+						    	<input type="radio" name="options" id="option2" autocomplete="off">
+						  	</label>
+						  	<label class="btn btn-medio medio">
+						    	<input type="radio" name="options" id="option3" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-primary">
+						    	<input type="radio" name="options" id="option4" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-success">
+						    	<input type="radio" name="options" id="option5" autocomplete="off">
+						  	</label>
+				        </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+				       <div class="btn-group" data-toggle="buttons">
+				         <label for="eval1" class="col-sm-4 control-label">eval4</label>
+				         	<label class="btn btn-danger ">
+					    		<input type="radio" name="options" id="option1" autocomplete="off">
+					  		</label> 
+					  		<label class="btn btn-warning">
+						    	<input type="radio" name="options" id="option2" autocomplete="off">
+						  	</label>
+						  	<label class="btn btn-medio medio">
+						    	<input type="radio" name="options" id="option3" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-primary">
+						    	<input type="radio" name="options" id="option4" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-success">
+						    	<input type="radio" name="options" id="option5" autocomplete="off">
+						  	</label>
+		        		</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+				        <div class="btn-group" data-toggle="buttons">
+				         <label for="eval1" class="col-sm-4 control-label">eval5</label>
+				         	<label class="btn btn-danger ">
+					    		<input type="radio" name="options" id="option1" autocomplete="off">
+					  		</label> 
+					  		<label class="btn btn-warning">
+						    	<input type="radio" name="options" id="option2" autocomplete="off">
+						  	</label>
+						  	<label class="btn btn-medio medio">
+						    	<input type="radio" name="options" id="option3" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-primary">
+						    	<input type="radio" name="options" id="option4" autocomplete="off">
+						  	</label>
+						   	<label class="btn btn-success">
+						    	<input type="radio" name="options" id="option5" autocomplete="off">
+						  	</label>
+				        </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<label for="Comentarios" class="col-sm-4 control-label">Comentarios: </label>
+						<textarea placeholder="añade un comentario sobre la evaluación"></textarea>
+					</div>
+				</div>
+			</form>
 		</div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12 classWithPad">
+                    <h3>Acciones</h3>
+                    <a href="#">Subir/evaluar</a><br/>
+                    <a href="#">Definir pseudonimo</a><br/>
+                    <a href="#">Condiciones de Evaluación</a>
+                </div>
+            </div>  
+       </div>
 	</div>
-	<footer style="text-align: center; font-weight: bold;">
-			@include('includes.footer')
-	 </footer>
+
+	</div>
 	  <!-- jQuery -->
 
     <script src="{{ URL::asset('js/jquery.js')}}"></script>

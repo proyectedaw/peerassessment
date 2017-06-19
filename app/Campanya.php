@@ -6,10 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Campanya extends Model
 {
-    //
-    public $campanya = [
-    'id_fase',
-    'nombre',
-    'activa'
-    ];
+    protected $fillable = ['estado_campanya', 'activa', 'nombre', 'fin'];
+
 }

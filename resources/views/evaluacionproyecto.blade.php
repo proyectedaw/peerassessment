@@ -1,7 +1,7 @@
 <?php 
 
-$width='width="190px"';
-$height='height="220px"';
+$width='width="110px"';
+$height='height="140px"';
 
 ?>
 
@@ -12,118 +12,124 @@ $height='height="220px"';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
-    <link rel="shortcut icon" href="{{ URL::asset('img/favicon.png')}}" type="image/x-icon"/>
+    <script src="{{ URL::asset('js/jquery-3.2.1.min.js')}}"></script>
 
-    <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
+    <link href="{{ URL::asset('css/styles.css')}}" rel="stylesheet">
 
-     <link href="{{ URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="{{ URL::asset('css/half-slider.css')}}" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <style type="text/css">
-    table, tr, td{
-        border: 0px black solid;
-        border-collapse: collapse;
-    }
-    .classWithPad { 
-        /*margin:10px; padding:10px; left: 160px */
-        position:absolute;
-        left:25%;
-    }
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    .buttonmodal {
-    	padding: 0;
-		border: none;
-		background: none;
-    }
-    .color{
-        background-color: navy;
-    }
-    </style>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-     <header>
-        @include('includes.header')
-    </header>
-   
-    <div class="container">
-        <div class="row">
-            <div class ="col-xs-8">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1>{{ trans('languaje.evaluacionproyecto4') }}</h1>
-	                        <table class="table table-hover text-centered container-fluid" align="center">
-	                        	<tr>
-	                        		<th></th>
-	                        		<th>{{ trans('languaje.evaluacionproyecto1') }}</th>
-	                        		<th>{{ trans('languaje.evaluacionproyecto2') }}</th>
-                                    <th>{{ trans('languaje.evaluacionproyecto3') }}</th>
-	                        		<th>Evaluar</th>
+    <header>
+        <div class="topfix">      
+            <div class="navbar color" role="navigation">
+              <div class="container"> 
+                <ul class="nav navbar-nav navbar-right">                           
+                    <li class="btn-group usu-new">
+                      <button type="button" class="btn btn-default" data-toggle="modal" data-target=".desconectar">Nombre participante</button>
+                      <button type="button" class="btn btn-default" data-toggle="modal" data-target=".desconectar">LOGOUT</button>
 
-	                        	</tr>
+                      <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target=".desconectar"><i class="fa fa-power-off"></i></button>-->
+                  </li>
+              </ul>
 
-                                 @foreach ($proyectos as $proyecto)
-                                <tr>
-                                    <td>Proyecto {{ $proyecto->id }}</td>
-                                    <td>{{ $proyecto->titol }}</td>
-                                    <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#{{ $proyecto->id }}"><img class="img-responsive" src="cartel/{{ $proyecto->id }}" alt="{{ $proyecto->titol}} " title="{{ $proyecto->titol }}"></button></td>
-                                    <td>{{ $proyecto->descripcion }}</td>
-                                    <?php $datosproyecto = $proyecto->id; //Hay que pasar el id al darle al boton
-                                        //echo $datosproyecto;
-                                     ?>
-                                    <!--<td><button type="submit" value="evaluar" class="btn btn-primary" onclick="window.location.href='/evaluacion'">Evaluar</button></td>-->
-                                    <td><a class="btn btn-primary" href="/evaluacion?<?php echo $datosproyecto; ?>">Evaluar</a></td>
-                                </tr>
-                                @endforeach
-	                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="row">
-                    <div class="col-xs-12 classWithPad hidden-xs">
-                        @include ('includes.acciones')
-                    </div>
-                </div>
-                
-            </div>
-        </div> 
-    </div>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                 <li class="menu-item"><a href="#">INICIO</a></li>
+             </ul>
 
-    <!--<script src="js/jquery.js"></script>-->
-    <script src="{{ URL::asset('js/jquery.js')}}"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <!--<script src="js/bootstrap.min.js"></script>-->
-    <script src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
-    <footer style="text-align: center; font-weight: bold;">
-            @include('includes.footer')
-     </footer>
-<!--Cambiar el src del modal para poder ver la imagen en grande-->
-  @foreach($proyectos as $key => $proyecto)
-    <div class="modal fade" id="{{ $proyecto->id }}" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <img src="cartel/{{ $proyecto->id }}" alt="Proyecto1">
+         </div><!--/.nav-collapse -->
+     </div><!--/.container-->
+ </div><!--/.navbar-->         
+</div>
+</header>
+
+<div class="contanier">
+    <div class="row">
+        <div class ="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Proyectos a Evaluar</h1>
+                    <table class="table table-hover text-centered" align="center">
+                      <tr>
+                       <th></th>
+                       <th>Titulo</th>
+                       <th>Psedonimo</th>
+                       <th>Cartel</th>
+                       <th>Evaluar</th>
+                   </tr>
+                   <tr>
+                       <td>Proyecto 1</td>
+                       <td>Titulo</td>
+                       <td>Pseudonimo</td>
+                       <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#proyecto1"><img <?php echo $width." ".$height ?> src="img/cartel-la-merce-barcelona.png"></button></td>
+                       <td><button class="btn btn-primary">Evaluar</button></td>
+                   </tr>
+                   <tr>
+                       <td>Proyecto 2</td>
+                       <td>Titulo</td>
+                       <td>Pseudonimo</td>
+                       <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#proyecto2"><img <?php echo $width." ".$height ?> src="img/cartell-2009_0.jpg"></button></td>
+                       <td><button class="btn btn-primary">Evaluar</button></td>
+                   </tr>
+                   <tr>
+                       <td>Proyecto 3</td>
+                       <td>Titulo</td>
+                       <td>Pseudonimo</td>
+                       <td><button class="buttonmodal" type="button" data-toggle="modal" data-target="#proyecto3"><img <?php echo $width." ".$height ?> src="img/cartell2013gran.jpg"></button></td>
+                       <td><button class="btn btn-primary">Evaluar</button></td>
+                   </tr>
+               </table>
+           </div>
+       </div>
+   </div>
+   <div class="col-md-4">
+    <div class="row">
+        <div class="col-md-12 classWithPad">
+            <h3>Acciones</h3>
+            <a href="#">Subir/evaluar</a><br/>
+            <a href="#">Definir pseudonimo</a><br/>
+            <a href="#">Condiciones de Evaluación</a>
         </div>
-      </div>
     </div>
-    @endforeach
-  
-  <!-- <div class="modal fade" id="proyecto2" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	        <img src="img/cartell-2009_0.jpg" alt="Proyecto1">
-	    </div>
-	  </div>
-	</div>
-    <div class="modal fade" id="proyecto3" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	        <img src="img/cartell2013gran.jpg" alt="Proyecto1">
-	    </div>
-	  </div>
-	</div>-->
+
+</div>
+</div> 
+</div>
+
+<footer>
+    <p>&copy; Copyright 2016 - All rights reserved - </p>
+</footer>
+
+<div class="modal fade" id="proyecto1" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <img src="img/cartel-la-merce-barcelona.png" alt="Proyecto1">
+     </div>
+ </div>
+</div>
+<div class="modal fade" id="proyecto2" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <img src="img/cartell-2009_0.jpg" alt="Proyecto1">
+     </div>
+ </div>
+</div>
+<div class="modal fade" id="proyecto3" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <img src="img/cartell2013gran.jpg" alt="Proyecto1">
+     </div>
+ </div>
+</div>
 </body>
 </html>
